@@ -34,3 +34,5 @@ vim.api.nvim_set_keymap('n', '<Tab>l', '<C-w>l', {silent = true})
 -- Move lines up and down
 vim.keymap.set('n', '<C-d>', '<C-d>zz', {noremap = true, silent = true})
 vim.keymap.set('n', '<C-u>', '<C-u>zz', {noremap = true, silent = true})
+
+vim.keymap.set('i', 'jk', '<Esc>', {noremap = true, silent = true})
