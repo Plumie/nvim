@@ -1,12 +1,7 @@
-vim.keymap.set('n', '<Leader>ff', require('telescope.builtin').find_files, {})
-vim.keymap.set('n', '<leader>fs', function()
-	require('telescope.builtin').grep_string({ search = vim.fn.input("Grep > ") })
-end)
 
-require('telescope').setup({ 
-	defaults = {
-   		preview = {
-   			treesitter = false,
-   		},
-   },
-})
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.git_files, {})
+vim.keymap.set('n', '<leader>fs', function()
+	builtin.grep_string({ search = vim.fn.input("Grep > ") })
+end)

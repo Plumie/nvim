@@ -10,7 +10,9 @@ Plug 'nvim-tree/nvim-web-devicons'
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 Plug 'ggandor/leap.nvim'
 Plug 'tpope/vim-fugitive'
-Plug 'ThePrimeagen/harpoon'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'nvim-tree/nvim-tree.lua'
+Plug 'kylechui/nvim-surround'
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason.nvim'
@@ -24,11 +26,13 @@ Plug 'hrsh7th/cmp-nvim-lua'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-Plug 'nvim-tree/nvim-tree.lua'
+Plug 'romgrk/barbar.nvim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'luochen1990/rainbow'
 
 call plug#end()
 
+let g:rainbow_active = 1 
 
 set encoding=utf-8
 colorscheme tokyonight
