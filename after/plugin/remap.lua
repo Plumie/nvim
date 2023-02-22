@@ -1,3 +1,4 @@
+
 -- Prevent arrow keys from moving the cursor in insert mode
 vim.keymap.set('i', '<Left>', '<Nop>', {noremap = true, silent = true})
 vim.keymap.set('i', '<Right>', '<Nop>', {noremap = true, silent = true})
