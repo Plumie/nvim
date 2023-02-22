@@ -13,7 +13,7 @@ Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'kylechui/nvim-surround'
 Plug 'romgrk/barbar.nvim'
-Plug 'luochen1990/rainbow'
+Plug 'mattn/emmet-vim'
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason.nvim'
@@ -29,8 +29,6 @@ Plug 'rafamadriz/friendly-snippets'
 Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}
 
 call plug#end()
-
-let g:rainbow_active = 1 
 
 set encoding=utf-8
 set tabstop=2
