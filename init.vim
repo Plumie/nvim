@@ -5,15 +5,15 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'zbirenbaum/copilot.lua'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'ggandor/leap.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'kylechui/nvim-surround'
 Plug 'romgrk/barbar.nvim'
-Plug 'navarasu/onedark.nvim'
-Plug 'goolord/alpha-nvim'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'startup-nvim/startup.nvim'
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason.nvim'
