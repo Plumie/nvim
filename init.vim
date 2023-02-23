@@ -9,11 +9,11 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'ggandor/leap.nvim'
 Plug 'tpope/vim-fugitive'
-Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'kylechui/nvim-surround'
 Plug 'romgrk/barbar.nvim'
-Plug 'mattn/emmet-vim'
+Plug 'navarasu/onedark.nvim'
+Plug 'goolord/alpha-nvim'
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason.nvim'
@@ -40,11 +40,10 @@ set relativenumber
 set updatetime=300
 set signcolumn=yes
 
-if (has("termguicolors"))
-  set termguicolors
-endif
-
 nnoremap <SPACE> <Nop>
 let mapleader=" "
+
+set termguicolors
+
 
 nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
