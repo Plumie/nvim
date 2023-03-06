@@ -13,7 +13,14 @@ Plug 'nvim-tree/nvim-tree.lua'
 Plug 'kylechui/nvim-surround'
 Plug 'romgrk/barbar.nvim'
 Plug 'navarasu/onedark.nvim'
-Plug 'goolord/alpha-nvim'
+Plug 'numToStr/Comment.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'RRethy/vim-illuminate'
+Plug 'nvim-telescope/telescope-project.nvim'
+Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
+Plug 'norcalli/nvim-colorizer.lua'
+Plug 'goolord/alpha-nvim',
+Plug 'eandrju/cellular-automaton.nvim',
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason.nvim'
@@ -27,6 +34,7 @@ Plug 'hrsh7th/cmp-nvim-lua'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}
+
 
 call plug#end()
 
@@ -43,7 +51,24 @@ set signcolumn=yes
 nnoremap <SPACE> <Nop>
 let mapleader=" "
 
+setlocal includeexpr=substitute(v:fname,'^@\/','src/','')
+
 set termguicolors
 
+nnoremap <leader>cd :cd %:h
 
-nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
+noremap <leader>k     {
+noremap <leader>j     }
+noremap <leader>h     ^
+noremap <leader>l     $
+
+nmap >> <Nop>
+nmap << <Nop>
+vmap >> <Nop>
+vmap << <Nop>
+nnoremap <Tab>   >>
+nnoremap <S-Tab> <<
+vnoremap <Tab>   >><Esc>gv
+vnoremap <S-Tab> <<<Esc>gv
+
+hi BufferTabpageFill guibg=gray

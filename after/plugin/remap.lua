@@ -26,4 +26,7 @@ vim.keymap.set('i', 'jk', '<Esc>', {noremap = true, silent = true})
 
 vim.keymap.set('n', '<leader>sv', '<C-w>v', {noremap = true, silent = true})
 vim.keymap.set('n', '<leader>sh', '<C-w>s', {noremap = true, silent = true})
-vim.keymap.set('n', '<leader>sx', ':close<CR>', {noremap = true, silent = true})
+vim.keymap.set('n', '<leader>sq', ':close<CR>', {noremap = true, silent = true})
+
+vim.keymap.set('n', '<leader>p', '"0p', {noremap = true, silent = true})
+vim.keymap.set('n', '<leader>P', '"0P', {noremap = true, silent = true})
