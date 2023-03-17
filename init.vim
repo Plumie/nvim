@@ -8,8 +8,8 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'ggandor/leap.nvim'
-Plug 'tpope/vim-fugitive'
 Plug 'nvim-tree/nvim-tree.lua'
+Plug 'tpope/vim-fugitive'
 Plug 'kylechui/nvim-surround'
 Plug 'romgrk/barbar.nvim'
 Plug 'navarasu/onedark.nvim'
@@ -20,6 +20,9 @@ Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'goolord/alpha-nvim',
 Plug 'eandrju/cellular-automaton.nvim',
+Plug 'jiangmiao/auto-pairs',
+Plug 'lewis6991/gitsigns.nvim'
+Plug 'alvan/vim-closetag'
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason.nvim'
@@ -34,7 +37,6 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}
 
-
 call plug#end()
 
 set encoding=utf-8
@@ -44,7 +46,7 @@ set expandtab
 set number
 set relativenumber
 
-set updatetime=300
+set updatetime=100
 set signcolumn=yes
 
 nnoremap <SPACE> <Nop>
@@ -54,20 +56,11 @@ setlocal includeexpr=substitute(v:fname,'^@\/','src/','')
 
 set termguicolors
 
-nnoremap <leader>cd :cd %:h
-
-noremap <leader>k     {
-noremap <leader>j     }
-noremap <leader>h     ^
-noremap <leader>l     $
-
-nmap >> <Nop>
-nmap << <Nop>
-vmap >> <Nop>
-vmap << <Nop>
 nnoremap <Tab>   >>
 nnoremap <S-Tab> <<
 vnoremap <Tab>   >><Esc>gv
 vnoremap <S-Tab> <<<Esc>gv
+
+nnoremap <silent> <leader>fr :lua vim.lsp.buf.format()<CR>
 
 hi BufferTabpageFill guibg=gray

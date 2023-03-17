@@ -20,7 +20,7 @@ map('n', '<A-9>', '<Cmd>BufferGoto 9<CR>', opts)
 map('n', '<A-0>', '<Cmd>BufferLast<CR>', opts)
 
 -- Close buffer
-map('n', '<A-q>', '<Cmd>BufferClose<CR>', opts)
+map('n', '<A-q>', '<Cmd>BufferClose!<CR>', opts)
 
 -- Open buffer in new tab
-map('n', '<A-o>', ':tabnew<CR>', {noremap = true, silent = true})
+map('n', '<A-o>', ':tabnew<CR>', { noremap = true, silent = true })
