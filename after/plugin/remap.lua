@@ -1,5 +1,5 @@
-
 -- Prevent arrow keys from moving the cursor in insert mode
+
 vim.keymap.set('i', '<Left>', '<Nop>', {noremap = true, silent = true})
 vim.keymap.set('i', '<Right>', '<Nop>', {noremap = true, silent = true})
 vim.keymap.set('i', '<Up>', '<Nop>', {noremap = true, silent = true})
@@ -28,8 +28,8 @@ vim.keymap.set('i', 'kj', '<Esc>', {noremap = true, silent = true})
 vim.keymap.set('n', '<leader>p', '"0p', {noremap = true, silent = true})
 vim.keymap.set('n', '<leader>P', '"0P', {noremap = true, silent = true})
 
-vim.keymap.set('n', '<S-k>', 'yyddkP', {noremap = true, silent = true})
-vim.keymap.set('n', '<S-j>', 'yyddp', {noremap = true, silent = true})
+vim.keymap.set('n', '<A-k>', 'yyddkP', {silent = true})
+vim.keymap.set('n', '<A-j>', 'yyddp', {silent = true})
 
 vim.keymap.set('n', '<Leader>o', 'o<Esc>k', {noremap = true, silent = true})
 vim.keymap.set('n', '<Leader>O', 'O<Esc>j', {noremap = true, silent = true})
