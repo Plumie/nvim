@@ -15,7 +15,6 @@ Plug 'romgrk/barbar.nvim'
 Plug 'navarasu/onedark.nvim'
 Plug 'numToStr/Comment.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'RRethy/vim-illuminate'
 Plug 'nvim-telescope/telescope-project.nvim'
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 Plug 'norcalli/nvim-colorizer.lua'
