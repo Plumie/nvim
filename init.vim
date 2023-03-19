@@ -1,4 +1,4 @@
-call plug#begin('~/AppData/Local/nvim/plugged')
+call plug#begin(stdpath('config') . '/plugged')
 
 Plug 'andweeb/presence.nvim'
 Plug 'nvim-lualine/lualine.nvim'
@@ -16,13 +16,13 @@ Plug 'navarasu/onedark.nvim'
 Plug 'numToStr/Comment.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'nvim-telescope/telescope-project.nvim'
-Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'goolord/alpha-nvim',
 Plug 'eandrju/cellular-automaton.nvim',
 Plug 'jiangmiao/auto-pairs',
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'alvan/vim-closetag'
+Plug 'alexghergh/nvim-tmux-navigation'
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason-lspconfig.nvim'
@@ -62,5 +62,14 @@ vnoremap <Tab>   >><Esc>gv
 vnoremap <S-Tab> <<<Esc>gv
 
 nnoremap <silent> <leader>fr :lua vim.lsp.buf.format()<CR>
+
+nnoremap <silent> vv <C-w>v
+
+nnoremap <silent> <C-h> <Cmd>NvimTmuxNavigateLeft<CR>
+nnoremap <silent> <C-j> <Cmd>NvimTmuxNavigateDown<CR>
+nnoremap <silent> <C-k> <Cmd>NvimTmuxNavigateUp<CR>
+nnoremap <silent> <C-l> <Cmd>NvimTmuxNavigateRight<CR>
+nnoremap <silent> <C-\> <Cmd>NvimTmuxNavigateLastActive<CR>
+nnoremap <silent> <C-Space> <Cmd>NvimTmuxNavigateNext<CR>
 
 hi BufferTabpageFill guibg=gray

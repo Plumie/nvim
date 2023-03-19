@@ -19,8 +19,8 @@ vim.api.nvim_set_keymap('n', '<leader>q', ':q<CR>', {noremap = true, silent = tr
 vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>', {noremap = true, silent = true})
 
 -- Move lines up and down
-vim.keymap.set('n', '<C-j>', '<C-d>zz', {noremap = true, silent = true})
-vim.keymap.set('n', '<C-k>', '<C-u>zz', {noremap = true, silent = true})
+vim.keymap.set('n', '<C-d>', '<C-d>zz', {noremap = true, silent = true})
+vim.keymap.set('n', '<C-u>', '<C-u>zz', {noremap = true, silent = true})
 
 vim.keymap.set('i', 'jk', '<Esc>', {noremap = true, silent = true})
 vim.keymap.set('i', 'kj', '<Esc>', {noremap = true, silent = true})
