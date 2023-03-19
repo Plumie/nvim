@@ -49,27 +49,10 @@ set relativenumber
 set updatetime=100
 set signcolumn=yes
 
-nnoremap <SPACE> <Nop>
-let mapleader=" "
-
 setlocal includeexpr=substitute(v:fname,'^@\/','src/','')
-
 set termguicolors
 
-nnoremap <Tab>   >>
-nnoremap <S-Tab> <<
-vnoremap <Tab>   >><Esc>gv
-vnoremap <S-Tab> <<<Esc>gv
-
-nnoremap <silent> <leader>fr :lua vim.lsp.buf.format()<CR>
-
-nnoremap <silent> vv <C-w>v
-
-nnoremap <silent> <C-h> <Cmd>NvimTmuxNavigateLeft<CR>
-nnoremap <silent> <C-j> <Cmd>NvimTmuxNavigateDown<CR>
-nnoremap <silent> <C-k> <Cmd>NvimTmuxNavigateUp<CR>
-nnoremap <silent> <C-l> <Cmd>NvimTmuxNavigateRight<CR>
-nnoremap <silent> <C-\> <Cmd>NvimTmuxNavigateLastActive<CR>
-nnoremap <silent> <C-Space> <Cmd>NvimTmuxNavigateNext<CR>
-
 hi BufferTabpageFill guibg=gray
+
+nnoremap <SPACE> <Nop>
+let mapleader=" "

@@ -1,24 +1,18 @@
--- Prevent arrow keys from moving the cursor in insert mode
-
 vim.keymap.set('i', '<Left>', '<Nop>', {noremap = true, silent = true})
 vim.keymap.set('i', '<Right>', '<Nop>', {noremap = true, silent = true})
 vim.keymap.set('i', '<Up>', '<Nop>', {noremap = true, silent = true})
 vim.keymap.set('i', '<Down>', '<Nop>', {noremap = true, silent = true})
 
--- Prevent arrow keys from moving the cursor in normal mode
 vim.keymap.set('n', '<Left>', '<Nop>', {noremap = true, silent = true})
 vim.keymap.set('n', '<Right>', '<Nop>', {noremap = true, silent = true})
 vim.keymap.set('n', '<Up>', '<Nop>', {noremap = true, silent = true})
 vim.keymap.set('n', '<Down>', '<Nop>', {noremap = true, silent = true})
 
--- Stop highlighting search results with <CR>
 vim.keymap.set('n', '<CR>', ':noh<CR><CR>', {noremap = true, silent = true})
 
--- Shortcuts for saving and quitting
 vim.api.nvim_set_keymap('n', '<leader>q', ':q<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>', {noremap = true, silent = true})
 
--- Move lines up and down
 vim.keymap.set('n', '<C-d>', '<C-d>zz', {noremap = true, silent = true})
 vim.keymap.set('n', '<C-u>', '<C-u>zz', {noremap = true, silent = true})
 
@@ -33,3 +27,19 @@ vim.keymap.set('n', '<A-j>', 'yyddp', {silent = true})
 
 vim.keymap.set('n', '<Leader>o', 'o<Esc>k', {noremap = true, silent = true})
 vim.keymap.set('n', '<Leader>O', 'O<Esc>j', {noremap = true, silent = true})
+
+vim.keymap.set('n', 'vv', '<C-w>v', {noremap = true, silent = true})
+
+vim.keymap.set('n', '<leader>fr', ':lua vim.lsp.buf.format()<CR>', {noremap = true, silent = true})
+
+vim.keymap.set('n', '<Tab>', '>>', {noremap = true, silent = true})
+vim.keymap.set('n', '<S-Tab>', '<<', {noremap = true, silent = true})
+vim.keymap.set('v', '<Tab>', '>><Esc>gv', {noremap = true, silent = true})
+vim.keymap.set('v', '<S-Tab>', '<<<Esc>gv', {noremap = true, silent = true})
+
+vim.keymap.set('n', '<C-h>', '<Cmd>NvimTmuxNavigateLeft<CR>', {noremap = true, silent = true})
+vim.keymap.set('n', '<C-j>', '<Cmd>NvimTmuxNavigateDown<CR>', {noremap = true, silent = true})
+vim.keymap.set('n', '<C-k>', '<Cmd>NvimTmuxNavigateUp<CR>', {noremap = true, silent = true})
+vim.keymap.set('n', '<C-l>', '<Cmd>NvimTmuxNavigateRight<CR>', {noremap = true, silent = true})
+vim.keymap.set('n', '<C-\\>', '<Cmd>NvimTmuxNavigateLastActive<CR>', {noremap = true, silent = true})
+vim.keymap.set('n', '<C-Space>', '<Cmd>NvimTmuxNavigateNext<CR>', {noremap = true, silent = true})
