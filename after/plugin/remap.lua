@@ -32,8 +32,6 @@ vim.keymap.set('n', 'vv', '<C-w>v', {noremap = true, silent = true})
 
 vim.keymap.set('n', '<leader>fr', ':lua vim.lsp.buf.format()<CR>', {noremap = true, silent = true})
 
-vim.keymap.set('n', '<Tab>', '>>', {noremap = true, silent = true})
-vim.keymap.set('n', '<S-Tab>', '<<', {noremap = true, silent = true})
 vim.keymap.set('v', '<Tab>', '>><Esc>gv', {noremap = true, silent = true})
 vim.keymap.set('v', '<S-Tab>', '<<<Esc>gv', {noremap = true, silent = true})
 
@@ -43,3 +41,5 @@ vim.keymap.set('n', '<C-k>', '<Cmd>NvimTmuxNavigateUp<CR>', {noremap = true, sil
 vim.keymap.set('n', '<C-l>', '<Cmd>NvimTmuxNavigateRight<CR>', {noremap = true, silent = true})
 vim.keymap.set('n', '<C-\\>', '<Cmd>NvimTmuxNavigateLastActive<CR>', {noremap = true, silent = true})
 vim.keymap.set('n', '<C-Space>', '<Cmd>NvimTmuxNavigateNext<CR>', {noremap = true, silent = true})
+
+vim.keymap.set('i', '}', '}', {noremap = false, silent = true})
