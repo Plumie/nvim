@@ -29,5 +29,6 @@ vim.keymap.set('n', '<leader>fr', ':lua vim.lsp.buf.format()<CR>', {noremap = tr
 
 vim.keymap.set('v', '<Tab>', '>><Esc>gv', {noremap = true, silent = true})
 vim.keymap.set('v', '<S-Tab>', '<<<Esc>gv', {noremap = true, silent = true})
+vim.keymap.set('v', '<c-Y>', '<<<Esc>gv', {noremap = true, silent = true})
 
 vim.keymap.set('i', '}', '}', {noremap = false, silent = true})

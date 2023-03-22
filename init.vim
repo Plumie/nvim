@@ -38,6 +38,7 @@ inoremap <silent><expr> <Tab>
       \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
 inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+inoremap <expr> <c-Y> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
 xmap <leader>af  <Plug>(coc-format-selected)
 nmap <leader>af  <Plug>(coc-format-selected)
@@ -63,11 +64,4 @@ function! CheckBackspace() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-set foldmethod=expr
-set foldexpr=nvim_treesitter#foldexpr()
-
-autocmd BufReadPost,FileReadPost * normal zR
-
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-
