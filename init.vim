@@ -21,9 +21,8 @@ Plug 'goolord/alpha-nvim',
 Plug 'eandrju/cellular-automaton.nvim',
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'alvan/vim-closetag'
-Plug 'alexghergh/nvim-tmux-navigation'
-Plug 'petertriho/nvim-scrollbar'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
