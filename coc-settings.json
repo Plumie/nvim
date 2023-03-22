@@ -1,0 +1,12 @@
+{
+  "typescript.suggest.completeFunctionCall": false,
+  "javascript.suggest.completeFunctionCalls": false,
+  "pairs.enableCharacters": [
+    "(",
+    "[",
+    "{",
+    "'",
+    "\"",
+    "`"
+  ]
+}

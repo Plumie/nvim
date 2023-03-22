@@ -8,8 +8,6 @@ vim.keymap.set('n', '<Right>', '<Nop>', {noremap = true, silent = true})
 vim.keymap.set('n', '<Up>', '<Nop>', {noremap = true, silent = true})
 vim.keymap.set('n', '<Down>', '<Nop>', {noremap = true, silent = true})
 
-vim.keymap.set('n', '<CR>', ':noh<CR><CR>', {noremap = true, silent = true})
-
 vim.api.nvim_set_keymap('n', '<leader>q', ':q<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>', {noremap = true, silent = true})
 
@@ -24,9 +22,6 @@ vim.keymap.set('n', '<leader>P', '"0P', {noremap = true, silent = true})
 
 vim.keymap.set('n', '<A-k>', 'yyddkP', {silent = true})
 vim.keymap.set('n', '<A-j>', 'yyddp', {silent = true})
-
-vim.keymap.set('n', '<Leader>o', 'o<Esc>k', {noremap = true, silent = true})
-vim.keymap.set('n', '<Leader>O', 'O<Esc>j', {noremap = true, silent = true})
 
 vim.keymap.set('n', 'vv', '<C-w>v', {noremap = true, silent = true})
 

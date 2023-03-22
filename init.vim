@@ -23,25 +23,13 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'alvan/vim-closetag'
 Plug 'alexghergh/nvim-tmux-navigation'
 Plug 'petertriho/nvim-scrollbar'
-Plug 'windwp/nvim-autopairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
-set encoding=utf-8
-set tabstop=2
-set shiftwidth=2
-set expandtab
-set number
-set relativenumber
-
-set updatetime=100
-set signcolumn=yes
-
 setlocal includeexpr=substitute(v:fname,'^@\/','src/','')
-set termguicolors
-
 hi BufferTabpageFill guibg=gray
+set termguicolors
 
 nnoremap <SPACE> <Nop>
 let mapleader=" "
@@ -52,23 +40,16 @@ inoremap <silent><expr> <Tab>
       \ coc#refresh()
 inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
-" Make <CR> to accept selected completion item or notify coc.nvim to format
-" <C-g>u breaks current undo, please make your own choice
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
-
+xmap <leader>af  <Plug>(coc-format-selected)
+nmap <leader>af  <Plug>(coc-format-selected)
 
 " GoTo code navigation
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-" Use K to show documentation in preview window
-nnoremap <silent> K :call ShowDocumentation()<CR>
+nmap <silent> <leader>ad <Plug>(coc-definition)
+nmap <silent> <leader>at <Plug>(coc-type-definition)
+nmap <silent> <leader>ai <Plug>(coc-implementation)
+nmap <silent> <leader>ar <Plug>(coc-references)
+nmap <silent> <leader>aa <Plug>(coc-codeaction-selected)
+nnoremap <silent> <leader>ak :call ShowDocumentation()<CR>
 
 function! ShowDocumentation()
   if CocAction('hasProvider', 'hover')
@@ -83,17 +64,11 @@ function! CheckBackspace() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-xmap <S-j> <Plug>(coc-codeaction-selected)
-nmap <S-j> <Plug>(coc-codeaction-selected)
-
-" Remap keys for applying code actions at the cursor position
-nmap <leader>ac <Plug>(coc-codeaction-cursor)
-" Remap keys for apply code actions affect whole buffer
-nmap <leader>as <Plug>(coc-codeaction-source)
-" Apply the most preferred quickfix action to fix diagnostic on the current line
-nmap <leader>qf <Plug>(coc-fix-current)
-
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
 
 autocmd BufReadPost,FileReadPost * normal zR
+
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+
