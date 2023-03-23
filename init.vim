@@ -24,6 +24,7 @@ Plug 'alvan/vim-closetag'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'preservim/vimux'
+Plug 'michaeljsmith/vim-indent-object'
 
 call plug#end()
 
@@ -50,6 +51,7 @@ nmap <silent> <leader>at <Plug>(coc-type-definition)
 nmap <silent> <leader>ai <Plug>(coc-implementation)
 nmap <silent> <leader>ar <Plug>(coc-references)
 nmap <silent> <leader>aa <Plug>(coc-codeaction-selected)
+
 nnoremap <silent> <leader>ak :call ShowDocumentation()<CR>
 
 function! ShowDocumentation()
@@ -68,3 +70,9 @@ endfunction
 map <Leader>vp :VimuxPromptCommand<CR>
 
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" custom line object
+xnoremap il g_o^
+onoremap il :normal vil<CR>
+xnoremap al $o^
+onoremap al :normal val<CR>
