@@ -1,28 +1,29 @@
 call plug#begin(stdpath('config') . '/plugged')
 
-Plug 'andweeb/presence.nvim'
 Plug 'nvim-lualine/lualine.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'nvim-tree/nvim-tree.lua'
+Plug 'romgrk/barbar.nvim'
+Plug 'navarasu/onedark.nvim'
+Plug 'goolord/alpha-nvim',
+Plug 'eandrju/cellular-automaton.nvim',
+Plug 'norcalli/nvim-colorizer.lua'
+Plug 'lukas-reineke/indent-blankline.nvim'
+
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'zbirenbaum/copilot.lua'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-tree/nvim-web-devicons'
 Plug 'ggandor/leap.nvim'
-Plug 'nvim-tree/nvim-tree.lua'
 Plug 'tpope/vim-fugitive'
-Plug 'romgrk/barbar.nvim'
 Plug 'kylechui/nvim-surround'
-Plug 'navarasu/onedark.nvim'
 Plug 'numToStr/Comment.nvim'
-Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'nvim-telescope/telescope-project.nvim'
-Plug 'norcalli/nvim-colorizer.lua'
-Plug 'goolord/alpha-nvim',
-Plug 'eandrju/cellular-automaton.nvim',
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'alvan/vim-closetag'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'preservim/vimux'
 
 call plug#end()
 
@@ -34,9 +35,9 @@ nnoremap <SPACE> <Nop>
 let mapleader=" "
 
 inoremap <silent><expr> <Tab>
-      \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
+  \ coc#pum#visible() ? coc#pum#next(1) :
+  \ CheckBackspace() ? "\<Tab>" :
+  \ coc#refresh()
 inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 inoremap <expr> <c-Y> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
@@ -63,5 +64,7 @@ function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+map <Leader>vp :VimuxPromptCommand<CR>
 
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
