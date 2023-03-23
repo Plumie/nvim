@@ -1,3 +1,6 @@
+vim.keymap.set("n", "<Space>", "<Nop>", { silent = true, remap = true })
+vim.g.mapleader = " "
+
 vim.keymap.set('i', '<Left>', '<Nop>', {noremap = true, silent = true})
 vim.keymap.set('i', '<Right>', '<Nop>', {noremap = true, silent = true})
 vim.keymap.set('i', '<Up>', '<Nop>', {noremap = true, silent = true})
@@ -16,8 +19,8 @@ vim.keymap.set('v', '<Down>', '<Nop>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>q', ':q<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>w', ':w!<CR>', {noremap = true, silent = true})
 
--- vim.keymap.set('n', '<C-d>', '<C-d>zz', {noremap = true, silent = true})
--- vim.keymap.set('n', '<C-u>', '<C-u>zz', {noremap = true, silent = true})
+vim.keymap.set('n', '<C-d>', '<C-d>zz', {noremap = true, silent = true})
+vim.keymap.set('n', '<C-u>', '<C-u>zz', {noremap = true, silent = true})
 
 vim.keymap.set('i', 'jk', '<Esc>', {noremap = true, silent = true})
 vim.keymap.set('i', 'kj', '<Esc>', {noremap = true, silent = true})
@@ -31,3 +34,10 @@ vim.keymap.set('n', 'vs', ':vs<CR>', {noremap = true, silent = true})
 vim.keymap.set('v', '<Tab>', '>><Esc>gv', {noremap = true, silent = true})
 vim.keymap.set('v', '<S-Tab>', '<<<Esc>gv', {noremap = true, silent = true})
 vim.keymap.set('v', '<c-Y>', '<<<Esc>gv', {noremap = true, silent = true})
+
+vim.cmd([[
+  xnoremap il g_o^
+  onoremap il :normal vil<CR>
+  xnoremap al $o^
+  onoremap al :normal val<CR>
+]])
