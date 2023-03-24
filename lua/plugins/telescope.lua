@@ -1,3 +1,5 @@
+require('telescope').load_extension('project')
+
 require('telescope').setup({
 	extensions = {
 		project = {
@@ -13,7 +15,6 @@ vim.keymap.set('n', '<leader>fs', function()
 	builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end)
 
-require('telescope').load_extension('project')
 
 vim.api.nvim_set_keymap(
 	'n',
