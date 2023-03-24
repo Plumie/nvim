@@ -16,7 +16,7 @@ vim.keymap.set('v', '<Up>', '<Nop>', {noremap = true, silent = true})
 vim.keymap.set('v', '<Right>', '<Nop>', {noremap = true, silent = true})
 vim.keymap.set('v', '<Down>', '<Nop>', {noremap = true, silent = true})
 
-vim.api.nvim_set_keymap('n', '<leader>q', ':q<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>q', ':bdelete!<CR>:blast<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>w', ':w!<CR>', {noremap = true, silent = true})
 
 vim.keymap.set('n', '<C-d>', '<C-d>zz', {noremap = true, silent = true})

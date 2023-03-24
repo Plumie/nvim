@@ -19,4 +19,6 @@ opt.clipboard:append("unnamedplus")
 opt.iskeyword:append("-")
 vim.opt.termguicolors = true
 
--- hi BufferTabpageFill guibg=gray
+vim.cmd([[
+  hi BufferTabpageFill guibg=red
+]])
