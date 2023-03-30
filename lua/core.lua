@@ -11,7 +11,6 @@ opt.wrap = false
 opt.updatetime = 300
 opt.ignorecase = true
 opt.smartcase = true
-opt.cursorline = true
 opt.background = 'dark'
 opt.signcolumn = 'yes'
 opt.backspace = "indent,eol,start"

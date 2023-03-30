@@ -41,3 +41,5 @@ vim.cmd([[
   xnoremap al $o^
   onoremap al :normal val<CR>
 ]])
+
+vim.api.nvim_set_keymap('n', '<leader>fd', '<cmd>Telescope diagnostics<CR>', { noremap = true, silent = true })
