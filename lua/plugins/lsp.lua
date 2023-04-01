@@ -9,7 +9,16 @@ require('mason-lspconfig').setup({
   }
 })
 
+local navbuddy = require("nvim-navbuddy")
+
+require("lspconfig").clangd.setup {
+    on_attach = function(client, bufnr)
+        navbuddy.attach(client, bufnr)
+    end
+}
+
 local lsp = require('lsp-zero').preset({
+
   name = 'minimal',
   set_lsp_keymaps = true,
   manage_nvim_cmp = true,

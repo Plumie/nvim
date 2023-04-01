@@ -16,7 +16,7 @@ vim.keymap.set('v', '<Up>', '<Nop>', {noremap = true, silent = true})
 vim.keymap.set('v', '<Right>', '<Nop>', {noremap = true, silent = true})
 vim.keymap.set('v', '<Down>', '<Nop>', {noremap = true, silent = true})
 
-vim.api.nvim_set_keymap('n', '<leader>q', ':bdelete!<CR>:blast<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>q', ':bdelete!<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>w', ':w!<CR>', {noremap = true, silent = true})
 
 vim.keymap.set('n', '<C-d>', '<C-d>zz', {noremap = true, silent = true})
@@ -40,6 +40,8 @@ vim.cmd([[
   onoremap il :normal vil<CR>
   xnoremap al $o^
   onoremap al :normal val<CR>
+
+  autocmd TabClosed * tabprevious
 ]])
 
 vim.api.nvim_set_keymap('n', '<leader>fd', '<cmd>Telescope diagnostics<CR>', { noremap = true, silent = true })
