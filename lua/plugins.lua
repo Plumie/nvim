@@ -27,6 +27,8 @@ Plug('preservim/vimux')
 Plug('michaeljsmith/vim-indent-object')
 Plug('akinsho/bufferline.nvim')
 Plug 'windwp/nvim-autopairs'
+Plug("MunifTanjim/nui.nvim")
+Plug("dpayne/CodeGPT.nvim")
 
 Plug('neovim/nvim-lspconfig')
 Plug('williamboman/mason.nvim', {['do'] = ':MasonUpdate'})
@@ -39,6 +41,8 @@ Plug('saadparwaiz1/cmp_luasnip')
 Plug('rafamadriz/friendly-snippets')
 
 vim.call('plug#end')
+
+vim.g["codegpt_openai_api_key"] = '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'
 
 require('plugins/alpha')
 require('plugins/bufferline')

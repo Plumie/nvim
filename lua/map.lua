@@ -44,4 +44,12 @@ vim.cmd([[
   autocmd TabClosed * tabprevious
 ]])
 
+vim.keymap.set('v', '<leader>cc', ':Chat completion<CR>', {noremap = true, silent = true})
+vim.keymap.set('v', '<leader>ce', ':Chat code_edit ',  {noremap = true, silent = true})
+vim.keymap.set('v', '<leader>cx', ':Chat explain<CR>',  {noremap = true, silent = true})
+vim.keymap.set('v', '<leader>cd', ':Chat doc<CR>',  {noremap = true, silent = true}) 
+vim.keymap.set('v', '<leader>co', ':Chat opt<CR>',  {noremap = true, silent = true})
+vim.keymap.set('v', '<leader>ct', ':Chat tests<CR>',  {noremap = true, silent = true})
+vim.keymap.set('n', '<leader>cc', ':Chat ',  {noremap = true, silent = true})
+
 vim.api.nvim_set_keymap('n', '<leader>fd', '<cmd>Telescope diagnostics<CR>', { noremap = true, silent = true })
