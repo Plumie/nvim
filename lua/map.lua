@@ -50,6 +50,9 @@ vim.keymap.set('v', '<leader>cx', ':Chat explain<CR>',  {noremap = true, silent 
 vim.keymap.set('v', '<leader>cd', ':Chat doc<CR>',  {noremap = true, silent = true}) 
 vim.keymap.set('v', '<leader>co', ':Chat opt<CR>',  {noremap = true, silent = true})
 vim.keymap.set('v', '<leader>ct', ':Chat tests<CR>',  {noremap = true, silent = true})
-vim.keymap.set('n', '<leader>cc', ':Chat ',  {noremap = true, silent = true})
+vim.keymap.set('n', '<leader>ca', ':Chat ',  {noremap = true, silent = true})
 
 vim.api.nvim_set_keymap('n', '<leader>fd', '<cmd>Telescope diagnostics<CR>', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('n', 'gh', '<cmddiffget //2<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'gl', '<cmddiffget //3<CR>', { noremap = true, silent = true })
