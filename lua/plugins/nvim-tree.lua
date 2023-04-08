@@ -33,7 +33,7 @@ require('nvim-tree').setup({
     width = function()
       return math.floor(vim.opt.columns:get() * WIDTH_RATIO)
     end,
-  },
+  }
 })
 
 vim.api.nvim_set_keymap('n', '<Leader>eo', ':NvimTreeToggle<CR>', {silent = true})
