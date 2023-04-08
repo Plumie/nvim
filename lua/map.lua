@@ -28,8 +28,8 @@ vim.keymap.set('i', 'kj', '<Esc>', {noremap = true, silent = true})
 vim.keymap.set('n', '<A-k>', 'yyddkP', {silent = true})
 vim.keymap.set('n', '<A-j>', 'yyddp', {silent = true})
 
-vim.keymap.set('n', 'vv', ':sp<CR>', {noremap = true, silent = true})
-vim.keymap.set('n', 'vs', ':vs<CR>', {noremap = true, silent = true})
+vim.keymap.set('n', '<leader>vv', ':sp<CR>', {noremap = true, silent = true})
+vim.keymap.set('n', '<leader>vs', ':vs<CR>', {noremap = true, silent = true})
 
 vim.keymap.set('v', '<Tab>', '>><Esc>gv', {noremap = true, silent = true})
 vim.keymap.set('v', '<S-Tab>', '<<<Esc>gv', {noremap = true, silent = true})
