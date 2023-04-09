@@ -1,23 +1,19 @@
 local opt = vim.opt
+local o = vim.o
 
-opt.encoding = 'utf-8'
 opt.number = true
 opt.relativenumber = true
 opt.tabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
-opt.wrap = false
-opt.updatetime = 300
-opt.ignorecase = true
-opt.smartcase = true
-opt.background = 'dark'
-opt.signcolumn = 'yes'
-opt.backspace = "indent,eol,start"
-opt.clipboard:append("unnamedplus")
-opt.iskeyword:append("-")
-vim.opt.termguicolors = true
 
-vim.cmd([[
-  hi BufferTabpageFill guibg=red
-]])
+o.hlsearch = true
+o.mouse = 'a'
+o.breakindent = true
+o.undofile = true
+o.ignorecase = true
+o.updatetime = 250
+o.timeout = true
+o.timeoutlen = 300
+o.termguicolors = true
