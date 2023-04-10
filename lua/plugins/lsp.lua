@@ -30,12 +30,12 @@ vim.diagnostic.config({
 })
 
 vim.api.nvim_set_keymap(
-  'n', '<Leader>dl', ':lua vim.diagnostic.goto_next()<CR>',
+  'n', '<Leader>dp', ':lua vim.diagnostic.goto_next()<CR>',
   { noremap = true, silent = true }
 )
 
 vim.api.nvim_set_keymap(
-  'n', '<Leader>dh', ':lua vim.diagnostic.goto_prev()<CR>',
+  'n', '<Leader>dn', ':lua vim.diagnostic.goto_prev()<CR>',
   { noremap = true, silent = true }
 )
 
