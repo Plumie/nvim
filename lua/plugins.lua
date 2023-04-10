@@ -28,7 +28,7 @@ Plug('christoomey/vim-tmux-navigator')
 Plug('michaeljsmith/vim-indent-object')
 Plug 'windwp/nvim-autopairs'
 Plug("MunifTanjim/nui.nvim")
-Plug("jackMort/ChatGPT.nvim")
+Plug("dpayne/CodeGPT.nvim")
 Plug('ThePrimeagen/harpoon')
 
 Plug('neovim/nvim-lspconfig')
@@ -41,6 +41,8 @@ Plug('L3MON4D3/LuaSnip')
 Plug('saadparwaiz1/cmp_luasnip')
 
 vim.call('plug#end')
+
+vim.g["codegpt_openai_api_key"] = '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'
 
 require('plugins/alpha')
 require('plugins/harpoon')
@@ -62,5 +64,3 @@ require('plugins/theme')
 require('plugins/lsp')
 require('plugins/autopairs')
 require('plugins/treesj')
-
-require('chatgpt').setup()
