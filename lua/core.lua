@@ -7,12 +7,18 @@ opt.tabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
-
+opt.ignorecase = true
+opt.smartcase = true
+opt.cursorline = true
+opt.background = 'dark'
+opt.signcolumn = 'yes'
+opt.wrap = false
+opt.backspace = "indent,eol,start"
+opt.clipboard:append("unnamedplus")
+opt.iskeyword:append("-")
 o.hlsearch = true
 o.mouse = 'a'
-o.breakindent = true
 o.undofile = true
-o.ignorecase = true
 o.updatetime = 250
 o.timeout = true
 o.timeoutlen = 300

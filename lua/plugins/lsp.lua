@@ -11,7 +11,7 @@ require('mason-lspconfig').setup({
 local lsp = require('lsp-zero').preset({
   set_lsp_keymaps = true,
   manage_nvim_cmp = true,
-  suggest_lsp_servers = false,
+--   suggest_lsp_servers = false,
 })
 
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
