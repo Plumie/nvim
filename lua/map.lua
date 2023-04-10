@@ -1,7 +1,7 @@
 vim.keymap.set("n", "<Space>", "<Nop>", { silent = true, remap = true })
 vim.g.mapleader = " "
 
-vim.keymap.set('i', '<Left>', '<Nop>', {noremap = true, silent = true})
+vim.keymap.set('i', '<Left>', '<Nop>', {noremap = true, silent = true}) 
 vim.keymap.set('i', '<Right>', '<Nop>', {noremap = true, silent = true})
 vim.keymap.set('i', '<Up>', '<Nop>', {noremap = true, silent = true})
 vim.keymap.set('i', '<Down>', '<Nop>', {noremap = true, silent = true})
@@ -51,7 +51,7 @@ vim.keymap.set('v', '<leader>co', ':Chat opt<CR>',  {noremap = true, silent = tr
 vim.keymap.set('v', '<leader>ct', ':Chat tests<CR>',  {noremap = true, silent = true})
 vim.keymap.set('n', '<leader>ca', ':Chat ',  {noremap = true, silent = true})
 
-vim.api.nvim_set_keymap('n', '<leader>ed', '<cmd>Telescope diagnostics<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>fd', '<cmd>Telescope diagnostics<CR>', { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap('n', 'gh', '<cmddiffget //2<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'gl', '<cmddiffget //3<CR>', { noremap = true, silent = true })

@@ -22,7 +22,6 @@ Plug('numToStr/Comment.nvim')
 Plug('nvim-telescope/telescope-project.nvim')
 Plug('lewis6991/gitsigns.nvim')
 Plug('windwp/nvim-ts-autotag')
-Plug('nvim-pack/nvim-spectre')
 
 Plug('christoomey/vim-tmux-navigator')
 Plug('preservim/vimux')
@@ -40,6 +39,7 @@ Plug('hrsh7th/cmp-nvim-lsp')
 Plug('VonHeikemen/lsp-zero.nvim', {branch = 'v1.x'})
 Plug('L3MON4D3/LuaSnip')
 Plug('saadparwaiz1/cmp_luasnip')
+
 vim.call('plug#end')
 
 vim.g["codegpt_openai_api_key"] = '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'
@@ -64,4 +64,3 @@ require('plugins/nvim-tree')
 require('plugins/theme')
 require('plugins/lsp')
 require('plugins/autopairs')
-require('plugins/spectre')
