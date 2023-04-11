@@ -29,14 +29,4 @@ vim.diagnostic.config({
   severity_sort = true,
 })
 
-vim.api.nvim_set_keymap(
-  'n', '<Leader>dp', ':lua vim.diagnostic.goto_next()<CR>',
-  { noremap = true, silent = true }
-)
-
-vim.api.nvim_set_keymap(
-  'n', '<Leader>dn', ':lua vim.diagnostic.goto_prev()<CR>',
-  { noremap = true, silent = true }
-)
-
 vim.api.nvim_command('autocmd CursorHold * lua vim.diagnostic.open_float({scope="line"})')

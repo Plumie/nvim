@@ -9,12 +9,12 @@ require('telescope').setup({
 })
 
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ep', builtin.find_files, {})
+vim.keymap.set('n', '<leader>p', builtin.find_files, {})
 vim.keymap.set('n', '<leader>f', builtin.live_grep, {})
 
 vim.api.nvim_set_keymap(
 	'n',
-	'<leader>ei',
+	'<leader>ep',
 	":lua require'telescope'.extensions.project.project{}<CR>",
 	{noremap = true, silent = true}
 )
