@@ -24,8 +24,15 @@ require('lspconfig').html.setup({
   filetypes = { 'html', 'twig' },
 })
 
+require('lspconfig').emmet_ls.setup({
+  filetypes = { 'html', 'twig', 'javascriptreact', 'javascript' },
+})
 
 lsp.setup()
+
+local ls = require 'luasnip'
+require('luasnip.loaders.from_vscode').lazy_load {}
+ls.filetype_extend('twig', { 'html', 'emmet' })
 
 vim.diagnostic.config({
   virtual_text = {

@@ -1,4 +1,6 @@
-require'nvim-autopairs'.setup()
+require('nvim-autopairs').setup({
+  disable_filetype = { "TelescopePrompt" },
+})
 
 vim.cmd([[
   let g:closetag_filenames = '*.html,*.jsx,*.tsx,*.twig'
@@ -8,7 +10,7 @@ vim.cmd([[
   \ }
 ]])
 
-
 require('nvim-ts-autotag').setup({
   filetypes = { "html" , "twig", "javascriptreact", "typescriptreact" },
+  
 })
