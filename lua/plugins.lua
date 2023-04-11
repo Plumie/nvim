@@ -39,6 +39,7 @@ Plug('hrsh7th/cmp-nvim-lsp')
 Plug('VonHeikemen/lsp-zero.nvim', {branch = 'v1.x'})
 Plug('L3MON4D3/LuaSnip')
 Plug('saadparwaiz1/cmp_luasnip')
+Plug('rafamadriz/friendly-snippets')
 
 vim.call('plug#end')
 
