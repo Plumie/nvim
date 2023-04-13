@@ -25,7 +25,7 @@ require('lspconfig').html.setup({
 })
 
 require('lspconfig').emmet_ls.setup({
-  filetypes = { 'html', 'twig', 'javascriptreact', 'javascript' },
+  filetypes = { 'html', 'twig', 'javascriptreact'},
 })
 
 lsp.setup()

@@ -15,6 +15,7 @@ opt.signcolumn = 'yes'
 opt.wrap = false
 opt.backspace = "indent,eol,start"
 opt.clipboard:append("unnamedplus")
+opt.swapfile = false
 o.hlsearch = true
 o.mouse = 'a'
 o.undofile = true

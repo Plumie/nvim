@@ -41,6 +41,9 @@ vim.cmd([[
   onoremap al :normal val<CR>
 
   autocmd TabClosed * tabprevious
+
+
+  let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.twig'
 ]])
 
 vim.keymap.set('v', '<leader>cc', ':Chat completion<CR>', {noremap = true, silent = true})
