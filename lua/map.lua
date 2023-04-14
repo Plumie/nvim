@@ -33,19 +33,6 @@ vim.keymap.set('n', 'vs', ':vs<CR><C-w>l', {noremap = true, silent = true})
 vim.keymap.set('v', '<Tab>', '>><Esc>gv', {noremap = true, silent = true})
 vim.keymap.set('v', '<S-Tab>', '<<<Esc>gv', {noremap = true, silent = true})
 
-
-vim.cmd([[
-  xnoremap il g_o^
-  onoremap il :normal vil<CR>
-  xnoremap al $o^
-  onoremap al :normal val<CR>
-
-  autocmd TabClosed * tabprevious
-
-
-  let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.twig'
-]])
-
 vim.keymap.set('v', '<leader>cc', ':Chat completion<CR>', {noremap = true, silent = true})
 vim.keymap.set('v', '<leader>ce', ':Chat code_edit<space>',  {noremap = true, silent = true})
 vim.keymap.set('v', '<leader>cx', ':Chat explain<CR>',  {noremap = true, silent = true})
@@ -56,3 +43,9 @@ vim.keymap.set('n', '<leader>ca', ':Chat<space>',  {noremap = true, silent = tru
 
 vim.api.nvim_set_keymap('n', 'gh', '<cmddiffget //2<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'gl', '<cmddiffget //3<CR>', { noremap = true, silent = true })
+
+
+vim.keymap.set("n", "s", function() require'pounce'.pounce { } end)
+vim.keymap.set("x", "s", function() require'pounce'.pounce { } end)
+vim.keymap.set("o", "gs", function() require'pounce'.pounce { } end)
+vim.keymap.set("n", "S", function() require'pounce'.pounce { input = {reg="/"} } end)

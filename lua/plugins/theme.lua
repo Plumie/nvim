@@ -25,6 +25,3 @@ vim.cmd [[
   hi Visual guifg=#000000 guibg=#CBC3E3 gui=none
   hi StatusLine guibg=NONE
 ]]
-
-
-require('neoscroll').setup()

@@ -17,14 +17,14 @@ Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
 Plug('zbirenbaum/copilot.lua')
 Plug('nvim-telescope/telescope.nvim', {tag = '0.1.1' })
 Plug('nvim-lua/plenary.nvim')
-Plug('ggandor/leap.nvim')
+-- Plug('ggandor/leap.nvim')
+Plug('rlane/pounce.nvim')
 Plug('tpope/vim-fugitive')
 Plug('kylechui/nvim-surround')
 Plug('numToStr/Comment.nvim')
 Plug('nvim-telescope/telescope-project.nvim')
 Plug('lewis6991/gitsigns.nvim')
 Plug('Wansmer/treesj')
-Plug('karb94/neoscroll.nvim')
 
 Plug('christoomey/vim-tmux-navigator')
 Plug('michaeljsmith/vim-indent-object')
@@ -45,6 +45,8 @@ Plug('rafamadriz/friendly-snippets')
 vim.call('plug#end')
 
 vim.g["codegpt_openai_api_key"] = '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'
+
+vim.g["closetag_filenames"] = '*.html,*.xhtml,*.phtml,*.twig'
 
 require('plugins/alpha')
 require('plugins/harpoon')
