@@ -18,6 +18,7 @@ Plug('nvim-telescope/telescope.nvim', {tag = '0.1.1' })
 Plug('nvim-lua/plenary.nvim')
 Plug('unblevable/quick-scope')
 Plug('RRethy/vim-illuminate')
+Plug('NvChad/nvim-colorizer.lua');
 
 Plug('rlane/pounce.nvim')
 Plug('tpope/vim-fugitive')
@@ -42,6 +43,7 @@ Plug('VonHeikemen/lsp-zero.nvim', {branch = 'v1.x'})
 Plug('L3MON4D3/LuaSnip')
 Plug('saadparwaiz1/cmp_luasnip')
 Plug('rafamadriz/friendly-snippets')
+Plug('onsails/lspkind.nvim')
 
 vim.call('plug#end')
 
