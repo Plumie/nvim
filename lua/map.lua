@@ -25,8 +25,8 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz', {noremap = true, silent = true})
 vim.keymap.set('i', 'jk', '<Esc>', {noremap = true, silent = true})
 vim.keymap.set('i', 'kj', '<Esc>', {noremap = true, silent = true})
 
-vim.keymap.set('n', '<A-k>', 'yyddkP', {silent = true})
-vim.keymap.set('n', '<A-j>', 'yyddp', {silent = true})
+vim.keymap.set('n', '<A-u>', 'yyddkP', {silent = true})
+vim.keymap.set('n', '<A-d>', 'yyddp', {silent = true})
 
 vim.keymap.set('n', 'vs', ':vs<CR><C-w>l', {noremap = true, silent = true})
 

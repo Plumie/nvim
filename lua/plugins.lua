@@ -8,7 +8,6 @@ Plug('nvim-tree/nvim-tree.lua')
 Plug('folke/tokyonight.nvim', {branch = 'main' })
 Plug('goolord/alpha-nvim')
 Plug('eandrju/cellular-automaton.nvim')
-Plug('norcalli/nvim-colorizer.lua')
 Plug('lukas-reineke/indent-blankline.nvim')
 Plug('echasnovski/mini.pairs')
 Plug('alvan/vim-closetag')
@@ -17,7 +16,9 @@ Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
 Plug('zbirenbaum/copilot.lua')
 Plug('nvim-telescope/telescope.nvim', {tag = '0.1.1' })
 Plug('nvim-lua/plenary.nvim')
--- Plug('ggandor/leap.nvim')
+Plug('unblevable/quick-scope')
+Plug('RRethy/vim-illuminate')
+
 Plug('rlane/pounce.nvim')
 Plug('tpope/vim-fugitive')
 Plug('kylechui/nvim-surround')
@@ -47,6 +48,13 @@ vim.call('plug#end')
 vim.g["codegpt_openai_api_key"] = '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'
 
 vim.g["closetag_filenames"] = '*.html,*.xhtml,*.phtml,*.twig'
+
+vim.cmd[[
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+
+highlight QuickScopePrimary guifg='#f000ff' gui=underline ctermfg=155 cterm=underline
+highlight QuickScopeSecondary guifg='#0fffff' gui=underline ctermfg=81 cterm=underline
+]]
 
 require('plugins/alpha')
 require('plugins/harpoon')
