@@ -1,25 +1,22 @@
-local opt = vim.opt
-local o = vim.o
-
-opt.number = true
-opt.relativenumber = true
-opt.tabstop = 2
-opt.shiftwidth = 2
-opt.expandtab = true
-opt.autoindent = true
-opt.ignorecase = true
-opt.smartcase = true
-opt.cursorline = true
-opt.background = 'dark'
-opt.signcolumn = 'yes'
-opt.wrap = false
-opt.backspace = "indent,eol,start"
-opt.clipboard:append("unnamedplus")
-opt.swapfile = false
-o.hlsearch = true
-o.mouse = 'a'
-o.undofile = true
-o.updatetime = 250
-o.timeout = true
-o.timeoutlen = 300
-o.termguicolors = true
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
+vim.opt.autoindent = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.cursorline = true
+vim.opt.background = 'dark'
+vim.opt.signcolumn = 'yes'
+vim.opt.wrap = false
+vim.opt.backspace = "indent,eol,start"
+vim.opt.clipboard:append("unnamedplus")
+vim.opt.swapfile = false
+vim.o.hlsearch = true
+vim.o.mouse = 'a'
+vim.o.undofile = true
+vim.o.updatetime = 250
+vim.o.timeout = true
+vim.o.timeoutlen = 300
+vim.o.termguicolors = true

@@ -1,14 +1,3 @@
--- require('onedark').setup {
---   style = "warm",
---   transparent = true,
---   lualine = {
---     transparent = true
---   },
---   barbar = {
---     transparent = true
---   }
--- }
---
 require('tokyonight').setup({
   transparent = true,
   styles = {

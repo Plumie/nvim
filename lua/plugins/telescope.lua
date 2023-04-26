@@ -1,6 +1,8 @@
-require('telescope').load_extension('project')
+local telescope = require('telescope')
 
-require('telescope').setup({
+telescope.load_extension('project')
+
+telescope.setup({
 	extensions = {
 		project = {
 			sync_with_nvim_tree = true,
@@ -9,9 +11,14 @@ require('telescope').setup({
 })
 
 local builtin = require('telescope.builtin')
+
+-- Find files
 vim.keymap.set('n', '<leader>p', builtin.find_files, {})
+
+-- Find in files
 vim.keymap.set('n', '<leader>f', builtin.live_grep, {})
 
+-- Project navigation
 vim.api.nvim_set_keymap(
 	'n',
 	'<leader>ep',

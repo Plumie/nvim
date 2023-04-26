@@ -1,7 +1,7 @@
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "javascript", "html", "typescript", "css" },
+require('nvim-treesitter.configs').setup({
+  ensure_installed = { 'javascript', 'html', 'typescript', 'css' },
   sync_install = false,
-  auto_install = true, 
+  auto_install = true,
   context_commentstring = {
     enable = true
   },
@@ -12,7 +12,4 @@ require'nvim-treesitter.configs'.setup {
   indent = {
     enable = true
   }
-}
-
-
-
+})
