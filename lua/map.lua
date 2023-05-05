@@ -38,8 +38,6 @@ vim.keymap.set('n', 'vs', ':vs<CR><C-w>l', default)
 -- Indentation
 vim.keymap.set('v', '<Tab>', '>><Esc>gv', default)
 vim.keymap.set('v', '<S-Tab>', '<<<Esc>gv', default)
-vim.keymap.set('n', '<Tab>', '>><Esc>gv', default)
-vim.keymap.set('n', '<S-Tab>', '<<<Esc>gv', default)
 
 -- Diffget
 vim.keymap.set('n', 'gh', '<cmddiffget //2<CR>', default)
