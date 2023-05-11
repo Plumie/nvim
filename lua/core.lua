@@ -19,3 +19,5 @@ vim.o.updatetime = 250
 vim.o.timeout = true
 vim.o.timeoutlen = 300
 vim.o.termguicolors = true
+vim.opt.scrolloff = 1
+vim.o.autoload = true
