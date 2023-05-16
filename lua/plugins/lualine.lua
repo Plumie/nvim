@@ -1,7 +1,7 @@
 return {
 	'nvim-lualine/lualine.nvim',
 	lazy = true,
-	event = 'BufWinEnter',
+	event = 'BufReadPre',
 
 	config = function()
 		local theme = require("lualine.themes.tokyonight")

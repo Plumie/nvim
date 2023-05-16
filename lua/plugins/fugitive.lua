@@ -1,5 +1,18 @@
 return {
 	'tpope/vim-fugitive',
+	lazy = true,
+	keys = {
+		'<leader>go',
+		'<leader>gps',
+		'<leader>gpl',
+		'<leader>gi'
+	},
+	cmd = {
+		'G',
+		'G push',
+		'G pull',
+		'G checkout'
+	},
 	
 	config = function()
 		vim.keymap.set("n", "<leader>go", ':G<CR>')

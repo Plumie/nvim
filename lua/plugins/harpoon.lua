@@ -1,5 +1,10 @@
 return {
 	'ThePrimeagen/harpoon',
+	lazy = true,
+	keys = {
+		'<leader>a',
+		'<leader><leader>',
+	},
 
 	config = function()
 		local default = { noremap = true, silent = true }

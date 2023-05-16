@@ -7,6 +7,10 @@ return{
 		'<leader>f',
 		'<leader>ep',
 	},
+	dependencies = {
+		'nvim-telescope/telescope-project.nvim',
+		'nvim-lua/plenary.nvim',
+	},
 	config = function()
 		local telescope = require('telescope')
 

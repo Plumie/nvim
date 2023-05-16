@@ -10,7 +10,6 @@ vim.opt.background = 'dark'
 vim.opt.signcolumn = 'yes'
 vim.opt.wrap = false
 vim.opt.backspace = "indent,eol,start"
-vim.opt.clipboard:append("unnamedplus")
 vim.opt.swapfile = false
 vim.o.hlsearch = true
 vim.o.mouse = 'a'
@@ -21,3 +20,5 @@ vim.o.timeoutlen = 300
 vim.o.termguicolors = true
 vim.opt.scrolloff = 1
 vim.o.autoload = true
+
+require('clipboard')
