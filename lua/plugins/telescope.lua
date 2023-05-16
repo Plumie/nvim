@@ -1,27 +1,39 @@
-local telescope = require('telescope')
+return{
+	'nvim-telescope/telescope.nvim', 
+	tag = '0.1.1',
+	lazy = true,
+	keys = {
+		'<leader>p',
+		'<leader>f',
+		'<leader>ep',
+	},
+	config = function()
+		local telescope = require('telescope')
 
-telescope.load_extension('project')
+		telescope.load_extension('project')
 
-telescope.setup({
-	extensions = {
-		project = {
-			sync_with_nvim_tree = true,
-		}
-	}
-})
+		telescope.setup({
+			extensions = {
+				project = {
+					sync_with_nvim_tree = true,
+				}
+			}
+		})
 
-local builtin = require('telescope.builtin')
+		local builtin = require('telescope.builtin')
 
--- Find files
-vim.keymap.set('n', '<leader>p', builtin.find_files, {})
+		-- Find files
+		vim.keymap.set('n', '<leader>p', builtin.find_files, {})
 
--- Find in files
-vim.keymap.set('n', '<leader>f', builtin.live_grep, {})
+		-- Find in files
+		vim.keymap.set('n', '<leader>f', builtin.live_grep, {})
 
--- Project navigation
-vim.api.nvim_set_keymap(
-	'n',
-	'<leader>ep',
-	":lua require'telescope'.extensions.project.project{}<CR>",
-	{noremap = true, silent = true}
-)
+		-- Project navigation
+		vim.api.nvim_set_keymap(
+			'n',
+			'<leader>ep',
+			":lua require'telescope'.extensions.project.project{}<CR>",
+			{noremap = true, silent = true}
+		)
+	end
+}

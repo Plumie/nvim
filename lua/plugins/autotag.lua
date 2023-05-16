@@ -1,11 +1,9 @@
 return {
-	'abecodes/tabout.nvim',
+	'windwp/nvim-ts-autotag',
 	lazy = true,
 	event = 'InsertEnter *',
 
 	config = function()
-		require('tabout').setup({
-			tabkey = 'jl'
-		})
+		require('nvim-ts-autotag').setup()
 	end
 }

@@ -1,17 +1,25 @@
-local theme = require("lualine.themes.tokyonight")
+return {
+	'nvim-lualine/lualine.nvim',
+	lazy = true,
+	event = 'BufWinEnter',
 
-theme.normal.c.bg = nil
+	config = function()
+		local theme = require("lualine.themes.tokyonight")
 
-require('lualine').setup({
-  options = {
-    theme = theme 
-  },
-  sections = {
-    lualine_c = {
-      {
-        'filename',
-        path = 1,
-      }
-    }
-  }
-})
+		theme.normal.c.bg = nil
+
+		require('lualine').setup({
+			options = {
+				theme = theme 
+			},
+			sections = {
+				lualine_c = {
+					{
+						'filename',
+						path = 1,
+					}
+				}
+			}
+		})
+	end
+}
