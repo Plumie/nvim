@@ -3,7 +3,6 @@ return {
 	['do'] = ':TSUpdate',
 	lazy = true,
 	event = 'BufReadPre',
-
 	config = function()
 		require('nvim-treesitter.configs').setup({
 			ensure_installed = { 'javascript', 'html', 'typescript', 'css' },

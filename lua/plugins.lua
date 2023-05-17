@@ -11,6 +11,7 @@ require("lazy").setup({
 	require('plugins/alpha'),
 	require('plugins/blankline'),
 	require('plugins/autotag'),
+	require('plugins/marks'),
 	require('plugins/lualine'),
 
 	require('plugins/illuminate'),
@@ -35,4 +36,5 @@ require("lazy").setup({
 	require('plugins/lsp/cmp'),
 	require('plugins/lsp/luasnip'),
 	require('plugins/lsp/tsc'),
+	require('plugins/lsp/null-ls')
 })

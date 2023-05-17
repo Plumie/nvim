@@ -28,10 +28,6 @@ vim.keymap.set('n', '<leader>w', ':w!<CR>', default)
 vim.keymap.set('n', '<C-d>', '<C-d>zz', default)
 vim.keymap.set('n', '<C-u>', '<C-u>zz', default)
 
--- Exit insert mode
-vim.keymap.set('i', 'jk', '<Esc>', default)
-vim.keymap.set('i', 'kj', '<Esc>', default)
-
 -- Split
 vim.keymap.set('n', 'vs', ':vs<CR><C-w>l', default)
 
