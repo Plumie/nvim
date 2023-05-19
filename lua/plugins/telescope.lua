@@ -32,6 +32,9 @@ return{
 		-- Find in files
 		vim.keymap.set('n', '<leader>f', builtin.live_grep, {})
 
+		-- Open diagnostics
+		vim.keymap.set('n', '<leader>ed', builtin.diagnostics, {})
+		
 		-- Project navigation
 		vim.api.nvim_set_keymap(
 			'n',

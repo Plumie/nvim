@@ -35,6 +35,5 @@ require("lazy").setup({
 	require('plugins/lsp/mason'),
 	require('plugins/lsp/cmp'),
 	require('plugins/lsp/luasnip'),
-	require('plugins/lsp/tsc'),
 	require('plugins/lsp/null-ls')
 })
