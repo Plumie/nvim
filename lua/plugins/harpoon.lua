@@ -11,7 +11,7 @@ return {
 
 		-- Main
 		vim.keymap.set('n', '<leader>a', '<Cmd>lua require("harpoon.mark").add_file()<CR>', default)
-		vim.keymap.set('n', '<leader><leader>', '<Cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>', default)
+		vim.keymap.set('n', '<leader><Tab>', '<Cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>', default)
 
 		-- Navigation
 		vim.keymap.set('n', '<a-h>', '<Cmd>lua require("harpoon.ui").nav_file(1)<CR>', default)

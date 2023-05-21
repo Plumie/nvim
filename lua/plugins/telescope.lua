@@ -6,21 +6,31 @@ return{
 		'<leader>p',
 		'<leader>f',
 		'<leader>ep',
+    '<leader>eu'
 	},
 	dependencies = {
 		'nvim-telescope/telescope-project.nvim',
 		'nvim-lua/plenary.nvim',
+    "debugloop/telescope-undo.nvim",
 	},
 	config = function()
 		local telescope = require('telescope')
-
-		telescope.load_extension('project')
 
 		telescope.setup({
 			extensions = {
 				project = {
 					sync_with_nvim_tree = true,
-				}
+				},
+        undo = {
+          mappings = {
+            i = {
+              ["<CR>"] = require("telescope-undo.actions").restore,
+            },
+            n = {
+              ["<CR>"] = require("telescope-undo.actions").restore,
+            },
+          }
+        },
 			}
 		})
 
@@ -40,6 +50,13 @@ return{
 			'n',
 			'<leader>ep',
 			":lua require'telescope'.extensions.project.project{}<CR>",
+			{noremap = true, silent = true}
+		)
+
+		vim.api.nvim_set_keymap(
+			'n',
+			'<leader>eu',
+			":lua require'telescope'.extensions.undo.undo{}<CR>",
 			{noremap = true, silent = true}
 		)
 	end

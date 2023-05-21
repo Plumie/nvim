@@ -3,6 +3,9 @@ return {
 	['do'] = ':TSUpdate',
 	lazy = true,
 	event = 'BufReadPre',
+  dependencies = {
+    'windwp/nvim-ts-autotag'
+  },
 	config = function()
 		require('nvim-treesitter.configs').setup({
 			ensure_installed = { 'javascript', 'html', 'typescript', 'css' },
@@ -17,7 +20,10 @@ return {
 			},
 			indent = {
 				enable = true
-			}
+			},
+      autotag = {
+        enable = true,
+      }
 		})
 	end
 }

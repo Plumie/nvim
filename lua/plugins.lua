@@ -10,7 +10,6 @@ require("lazy").setup({
 	require('plugins/nvim-web-devicons'),
 	require('plugins/alpha'),
 	require('plugins/blankline'),
-	require('plugins/autotag'),
 	require('plugins/marks'),
 	require('plugins/lualine'),
 

@@ -1,9 +1,11 @@
 return {
-	'echasnovski/mini.pairs',
+	'windwp/nvim-autopairs',
 	lazy = true,
 	event = 'InsertEnter *',
 
 	config = function()
-		require('mini.pairs').setup()
+    require("nvim-autopairs").setup {
+      check_ts = true,
+    }
 	end
 }
