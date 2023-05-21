@@ -3,7 +3,7 @@ return {
 	lazy = true,
 	keys = {
 		'<leader>a',
-		'<leader><leader>',
+		'<leader><Tab>',
 	},
 
 	config = function()

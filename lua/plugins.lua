@@ -11,7 +11,7 @@ require("lazy").setup({
 	require('plugins/alpha'),
 	require('plugins/blankline'),
 	require('plugins/marks'),
-	require('plugins/lualine'),
+  require('plugins/lualine'),
 
 	require('plugins/illuminate'),
 	require('plugins/quickscope'),
@@ -24,10 +24,9 @@ require("lazy").setup({
 	require('plugins/copilot'),
 	
 	require('plugins/treesj'),
-	require('plugins/tabout'),
 	require('plugins/harpoon'),
 	require('plugins/gitsigns'),
-
+  
 	require('plugins/lsp/nvim-lspconfig'),
 	require('plugins/lsp/lsp-zero'),
 	require('plugins/lsp/mason-lspconfig'),

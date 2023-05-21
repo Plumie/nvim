@@ -6,7 +6,9 @@ return{
 		'<leader>p',
 		'<leader>f',
 		'<leader>ep',
-    '<leader>eu'
+    '<leader>eu',
+    '<leader>gb',
+    '<leader>gs'
 	},
 	dependencies = {
 		'nvim-telescope/telescope-project.nvim',
@@ -45,6 +47,12 @@ return{
 		-- Open diagnostics
 		vim.keymap.set('n', '<leader>ed', builtin.diagnostics, {})
 		
+		-- Open branches
+		vim.keymap.set('n', '<leader>gb', builtin.git_branches, {})
+    
+		-- Open branches
+		vim.keymap.set('n', '<leader>gs', builtin.git_stash, {})
+    
 		-- Project navigation
 		vim.api.nvim_set_keymap(
 			'n',
