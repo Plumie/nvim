@@ -1,30 +1,50 @@
 return {
 	'hrsh7th/nvim-cmp',
-	lazy = true,
-	event = 'InsertEnter *',
 	dependencies = {
-		'onsails/lspkind.nvim',
 		'hrsh7th/cmp-nvim-lsp',
+    'onsails/lspkind.nvim',
+    'hrsh7th/cmp-buffer',
 	},
 
 	config = function()
 		local cmp = require('cmp')
     local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 
+    local ls = require('luasnip')
+    require('luasnip.loaders.from_vscode').lazy_load()
+    ls.filetype_extend('twig', { 'html' })
+
+    cmp.setup({
+      sources = {
+        {name = 'nvim_lsp'},
+        {name = 'buffer'},
+        {name = 'luasnip'},
+      },
+      formatting = {
+        fields = {'abbr', 'kind', 'menu'},
+        format = require('lspkind').cmp_format({
+          mode = 'symbol',
+          maxwidth = 50,
+          ellipsis_char = '...',
+        })
+      },
+      mapping = {
+        ['<Tab>'] = cmp.mapping.select_next_item(),
+        ['<S-Tab>'] = cmp.mapping.select_prev_item(),
+        ['<CR>'] = cmp.mapping.confirm({
+          behavior = cmp.ConfirmBehavior.Replace,
+          select = true,
+        }),
+      },
+      window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
+      }
+    })
+
     cmp.event:on(
       'confirm_done',
       cmp_autopairs.on_confirm_done()
     )
-
-		local lspkind = require('lspkind')
-
-		cmp.setup {
-			formatting = {
-				format = function(entry, vim_item)
-					vim_item.kind = string.format("%s %s", lspkind.presets.default[vim_item.kind], vim_item.kind)
-					return vim_item
-				end,
-			},
-		}
 	end
 }

@@ -1,13 +1,13 @@
 return {
 	'VonHeikemen/lsp-zero.nvim',
+  priority = 100,
 	branch = 'v1.x',
-	lazy = true,
-	event = 'BufReadPre',
 	config = function()
-		local lsp = require('lsp-zero').preset({
-			set_lsp_keymaps = true,
-			manage_nvim_cmp = true,
-		})
+		local lsp = require('lsp-zero').preset()
+
+    lsp.on_attach(function(client, bufnr)
+      lsp.default_keymaps({buffer = bufnr})
+    end)
 
 		local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 		for type, icon in pairs(signs) do
