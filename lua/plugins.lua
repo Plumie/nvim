@@ -25,7 +25,6 @@ require("lazy").setup({
 	require('plugins/gitsigns'),
 	require('plugins/lsp/nvim-lspconfig'),
 	require('plugins/lsp/lsp-zero'),
-	require('plugins/lsp/luasnip'),
 	require('plugins/lsp/cmp'),
 	require('plugins/lsp/mason-lspconfig'),
 	require('plugins/lsp/mason'),
