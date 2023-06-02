@@ -2,7 +2,6 @@ return {
 	'hrsh7th/nvim-cmp',
 	dependencies = {
 		'hrsh7th/cmp-nvim-lsp',
-    'onsails/lspkind.nvim',
     'hrsh7th/cmp-buffer',
 	},
 
@@ -22,11 +21,6 @@ return {
       },
       formatting = {
         fields = {'abbr', 'kind', 'menu'},
-        format = require('lspkind').cmp_format({
-          mode = 'symbol',
-          maxwidth = 50,
-          ellipsis_char = '...',
-        })
       },
       mapping = {
         ['<Tab>'] = cmp.mapping.select_next_item(),
@@ -39,7 +33,12 @@ return {
       window = {
         completion = cmp.config.window.bordered(),
         documentation = cmp.config.window.bordered(),
-      }
+      },
+      snippet = {
+        expand = function(args)
+          require('luasnip').lsp_expand(args.body)
+        end,
+      },
     })
 
     cmp.event:on(
