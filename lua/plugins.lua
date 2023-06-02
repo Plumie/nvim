@@ -7,6 +7,7 @@ require("lazy").setup({
   require('plugins/autopairs'),
   require('plugins/cellular-automaton'),
   -- require('plugins/nvim-tree'),
+  require('plugins/oil'),
   require('plugins/nvim-web-devicons'),
   require('plugins/alpha'),
   require('plugins/blankline'),
