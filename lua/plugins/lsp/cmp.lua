@@ -3,6 +3,9 @@ return {
 	dependencies = {
 		'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-buffer',
+    'L3MON4D3/LuaSnip',
+		'saadparwaiz1/cmp_luasnip',
+		'rafamadriz/friendly-snippets',
 	},
 
 	config = function()
@@ -16,7 +19,11 @@ return {
     cmp.setup({
       sources = {
         {name = 'nvim_lsp'},
-        {name = 'buffer'},
+        {
+          name = 'buffer',
+          keyword_length = 2,
+          max_item_count = 8,
+        },
         {name = 'luasnip'},
       },
       formatting = {
@@ -36,7 +43,10 @@ return {
       },
       snippet = {
         expand = function(args)
-          require('luasnip').lsp_expand(args.body)
+            if not ls then
+                return
+            end
+            ls.lsp_expand(args.body)
         end,
       },
     })
