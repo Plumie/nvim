@@ -8,6 +8,9 @@ return {
       view_options = {
         show_hidden = true,
       },
+      keymaps = {
+        ["\\"] = "actions.parent"
+      }
     })
 
     vim.keymap.set('n', '<Leader>eo', ':Oil<CR>', {})
