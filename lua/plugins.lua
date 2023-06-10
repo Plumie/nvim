@@ -29,5 +29,6 @@ require("lazy").setup({
   require('plugins/lsp/cmp'),
   require('plugins/lsp/mason-lspconfig'),
   require('plugins/lsp/mason'),
-  require('plugins/lsp/null-ls')
+  require('plugins/lsp/null-ls'),
+  require('plugins/discord')
 })
