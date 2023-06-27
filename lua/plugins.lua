@@ -2,16 +2,13 @@ require('manager')
 
 require("lazy").setup({
   'christoomey/vim-tmux-navigator',
-
   require('plugins/theme'),
   require('plugins/autopairs'),
   require('plugins/cellular-automaton'),
-  -- require('plugins/nvim-tree'),
   require('plugins/oil'),
   require('plugins/nvim-web-devicons'),
   require('plugins/alpha'),
   require('plugins/blankline'),
-  require('plugins/marks'),
   require('plugins/lualine'),
   require('plugins/quickscope'),
   require('plugins/pounce'),
@@ -30,5 +27,6 @@ require("lazy").setup({
   require('plugins/lsp/mason-lspconfig'),
   require('plugins/lsp/mason'),
   require('plugins/lsp/null-ls'),
+  require('plugins/move'),
   require('plugins/discord')
 })
