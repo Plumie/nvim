@@ -1,7 +1,7 @@
 return {
 	'unblevable/quick-scope',
 	lazy = true,
-	event = 'BufReadPre',
+	event = 'BufReadCmd',
 
 	init = function()
 		vim.cmd[[

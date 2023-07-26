@@ -1,37 +1,37 @@
-return{
-	'nvim-telescope/telescope.nvim', 
-	tag = '0.1.1',
-	lazy = true,
-	keys = {
-		'<leader>p',
-		'<leader>f',
-		'<leader>ep',
+return {
+  'nvim-telescope/telescope.nvim',
+  tag = '0.1.1',
+  lazy = true,
+  keys = {
+    '<leader>p',
+    '<leader>f',
+    '<leader>ep',
     '<leader>eu',
     '<leader>gb',
     '<leader>gs'
-	},
-	dependencies = {
-		'nvim-telescope/telescope-project.nvim',
-		'nvim-lua/plenary.nvim',
+  },
+  dependencies = {
+    'nvim-telescope/telescope-project.nvim',
+    'nvim-lua/plenary.nvim',
     "debugloop/telescope-undo.nvim",
-	},
-	config = function()
-		local telescope = require('telescope')
+  },
+  config = function()
+    local telescope = require('telescope')
 
-		telescope.setup({
+    telescope.setup({
       defaults = {
         preview = {
           filesize_hook = function(filepath, bufnr, opts)
             local max_bytes = 10000
-            local cmd = {"head", "-c", max_bytes, filepath}
+            local cmd = { "head", "-c", max_bytes, filepath }
             require('telescope.previewers.utils').job_maker(cmd, bufnr, opts)
           end
         }
       },
-			extensions = {
-				project = {
-					sync_with_nvim_tree = true,
-				},
+      extensions = {
+        project = {
+          sync_with_nvim_tree = true,
+        },
         undo = {
           mappings = {
             i = {
@@ -42,39 +42,39 @@ return{
             },
           }
         },
-			}
-		})
+      }
+    })
 
-		local builtin = require('telescope.builtin')
+    local builtin = require('telescope.builtin')
 
-		-- Find files
-		vim.keymap.set('n', '<leader>p', builtin.find_files, {})
+    -- Find files
+    vim.keymap.set('n', '<leader>p', builtin.find_files, {})
 
-		-- Find in files
-		vim.keymap.set('n', '<leader>f', builtin.live_grep, {})
+    -- Find in files
+    vim.keymap.set('n', '<leader>f', builtin.live_grep, {})
 
-		-- Open diagnostics
-		vim.keymap.set('n', '<leader>ed', builtin.diagnostics, {})
-		
-		-- Open branches
-		vim.keymap.set('n', '<leader>gb', builtin.git_branches, {})
-    
-		-- Open branches
-		vim.keymap.set('n', '<leader>gs', builtin.git_stash, {})
-    
-		-- Project navigation
-		vim.api.nvim_set_keymap(
-			'n',
-			'<leader>ep',
-			":lua require'telescope'.extensions.project.project{}<CR>",
-			{noremap = true, silent = true}
-		)
+    -- Open diagnostics
+    vim.keymap.set('n', '<leader>ed', builtin.diagnostics, {})
 
-		vim.api.nvim_set_keymap(
-			'n',
-			'<leader>eu',
-			":lua require'telescope'.extensions.undo.undo{}<CR>",
-			{noremap = true, silent = true}
-		)
-	end
+    -- Open branches
+    vim.keymap.set('n', '<leader>gb', builtin.git_branches, {})
+
+    -- Open branches
+    vim.keymap.set('n', '<leader>gs', builtin.git_stash, {})
+
+    -- Project navigation
+    vim.api.nvim_set_keymap(
+      'n',
+      '<leader>ep',
+      ":lua require'telescope'.extensions.project.project{}<CR>",
+      { noremap = true, silent = true }
+    )
+
+    vim.api.nvim_set_keymap(
+      'n',
+      '<leader>eu',
+      ":lua require'telescope'.extensions.undo.undo{}<CR>",
+      { noremap = true, silent = true }
+    )
+  end
 }

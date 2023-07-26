@@ -35,9 +35,5 @@ vim.keymap.set('n', 'vs', ':vs<CR><C-w>l', default)
 vim.keymap.set('v', '<Tab>', '>><Esc>gv', default)
 vim.keymap.set('v', '<S-Tab>', '<<<Esc>gv', default)
 
--- Diffget
-vim.keymap.set('n', 'gh', '<cmddiffget //2<CR>', default)
-vim.keymap.set('n', 'gl', '<cmddiffget //3<CR>', default)
-
 -- Get old pasted text
 vim.keymap.set('n', 'gp', '`[v`]', default)

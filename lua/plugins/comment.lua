@@ -1,9 +1,9 @@
 return {
-	'numToStr/Comment.nvim',
-	lazy = true,
-	event = "BufReadPre",
+  'numToStr/Comment.nvim',
+  lazy = true,
+	keys = { "gc" },
 
-	config = function() 
-		require('Comment').setup()
-	end
+  config = function()
+    require('Comment').setup()
+  end
 }

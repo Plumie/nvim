@@ -1,3 +1,7 @@
+-- Init lazy
+
+require('manager')
+
 -- Core settings
 require('core')
 

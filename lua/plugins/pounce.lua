@@ -1,7 +1,7 @@
 return {
 	'rlane/pounce.nvim',
 	lazy = true,
-	event = "BufReadPre",
+	event = "BufReadCmd",
 
 	config = function()
 		vim.keymap.set("n", "s", function() require'pounce'.pounce { } end)

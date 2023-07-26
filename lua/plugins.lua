@@ -1,7 +1,5 @@
-require('manager')
-
 require("lazy").setup({
-  'christoomey/vim-tmux-navigator',
+  require('plugins/tmux'),
   require('plugins/theme'),
   require('plugins/autopairs'),
   require('plugins/cellular-automaton'),
@@ -21,6 +19,7 @@ require("lazy").setup({
   require('plugins/treesj'),
   require('plugins/harpoon'),
   require('plugins/gitsigns'),
+  require('plugins/move'),
   require('plugins/lsp/nvim-lspconfig'),
   require('plugins/lsp/lsp-zero'),
   require('plugins/lsp/cmp'),
