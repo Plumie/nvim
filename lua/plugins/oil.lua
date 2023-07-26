@@ -2,7 +2,7 @@ return {
   'stevearc/oil.nvim',
   config = function()
     require('oil').setup({
-       buf_options = {
+      buf_options = {
         buflisted = false
       },
       view_options = {

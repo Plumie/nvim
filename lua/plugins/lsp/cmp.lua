@@ -1,15 +1,15 @@
 return {
-	'hrsh7th/nvim-cmp',
-	dependencies = {
-		'hrsh7th/cmp-nvim-lsp',
+  'hrsh7th/nvim-cmp',
+  dependencies = {
+    'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-buffer',
     'L3MON4D3/LuaSnip',
-		'saadparwaiz1/cmp_luasnip',
-		'rafamadriz/friendly-snippets',
-	},
+    'saadparwaiz1/cmp_luasnip',
+    'rafamadriz/friendly-snippets',
+  },
 
-	config = function()
-		local cmp = require('cmp')
+  config = function()
+    local cmp = require('cmp')
     local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 
     local ls = require('luasnip')
@@ -18,16 +18,16 @@ return {
 
     cmp.setup({
       sources = {
-        {name = 'nvim_lsp'},
+        { name = 'nvim_lsp' },
         {
           name = 'buffer',
           keyword_length = 2,
           max_item_count = 8,
         },
-        {name = 'luasnip'},
+        { name = 'luasnip' },
       },
       formatting = {
-        fields = {'abbr', 'kind', 'menu'},
+        fields = { 'abbr', 'kind', 'menu' },
       },
       mapping = {
         ['<Tab>'] = cmp.mapping.select_next_item(),
@@ -43,10 +43,10 @@ return {
       },
       snippet = {
         expand = function(args)
-            if not ls then
-                return
-            end
-            ls.lsp_expand(args.body)
+          if not ls then
+            return
+          end
+          ls.lsp_expand(args.body)
         end,
       },
     })
@@ -55,5 +55,5 @@ return {
       'confirm_done',
       cmp_autopairs.on_confirm_done()
     )
-	end
+  end
 }

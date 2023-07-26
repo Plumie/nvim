@@ -1,11 +1,11 @@
 return {
-	'windwp/nvim-autopairs',
-	lazy = true,
-	event = 'InsertEnter *',
+  'windwp/nvim-autopairs',
+  lazy = true,
+  event = 'InsertEnter *',
 
-	config = function()
+  config = function()
     require("nvim-autopairs").setup {
       check_ts = true,
     }
-	end
+  end
 }

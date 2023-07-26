@@ -1,25 +1,25 @@
 return {
-	'nvim-lualine/lualine.nvim',
-	lazy = true,
-	event = 'BufReadCmd',
+  'nvim-lualine/lualine.nvim',
+  lazy = true,
+  event = 'BufReadCmd',
 
-	config = function()
-		local theme = require("lualine.themes.tokyonight")
+  config = function()
+    local theme = require("lualine.themes.tokyonight")
 
-		theme.normal.c.bg = nil
+    theme.normal.c.bg = nil
 
-		require('lualine').setup({
-			options = {
-				theme = theme 
-			},
-			sections = {
-				lualine_c = {
-					{
-						'filename',
-						path = 1,
-					}
-				}
-			}
-		})
-	end
+    require('lualine').setup({
+      options = {
+        theme = theme
+      },
+      sections = {
+        lualine_c = {
+          {
+            'filename',
+            path = 1,
+          }
+        }
+      }
+    })
+  end
 }
