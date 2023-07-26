@@ -24,28 +24,28 @@ vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
             ["*"] = "xclip -selection clipboard -o",
           },
         }
-		elseif vim.fn.has("mac") == 1 then
-				vim.g.clipboard = {
-					copy = {
-						["+"] = "pbcopy",
-						["*"] = "pbcopy",
-					},
-					paste = {
-						["+"] = "pbpaste",
-						["*"] = "pbpaste",
-					},
-				}
-			else
-				vim.g.clipboard = {
-					copy = {
-						["+"] = "echo 'Clipboard copy not supported'",
-						["*"] = "echo 'Clipboard copy not supported'",
-					},
-					paste = {
-						["+"] = "echo 'Clipboard paste not supported'",
-						["*"] = "echo 'Clipboard paste not supported'",
-					},
-				}
+      elseif vim.fn.has("mac") == 1 then
+        vim.g.clipboard = {
+          copy = {
+            ["+"] = "pbcopy",
+            ["*"] = "pbcopy",
+          },
+          paste = {
+            ["+"] = "pbpaste",
+            ["*"] = "pbpaste",
+          },
+        }
+      else
+        vim.g.clipboard = {
+          copy = {
+            ["+"] = "echo 'Clipboard copy not supported'",
+            ["*"] = "echo 'Clipboard copy not supported'",
+          },
+          paste = {
+            ["+"] = "echo 'Clipboard paste not supported'",
+            ["*"] = "echo 'Clipboard paste not supported'",
+          },
+        }
       end
     end
 
