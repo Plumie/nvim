@@ -1,8 +1,5 @@
 return {
   'echasnovski/mini.move',
-  lazy = true,
-  event = 'BufReadCmd',
-
   init = function()
     require('mini.move').setup({
       options = {

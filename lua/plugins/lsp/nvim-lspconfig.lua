@@ -1,8 +1,5 @@
 return {
   'neovim/nvim-lspconfig',
-  lazy = true,
-  event = 'BufReadCmd',
-
   config = function()
     require('lspconfig').html.setup({
       filetypes = { 'html', 'twig', 'vue' },

@@ -1,6 +1,7 @@
 return {
   'VonHeikemen/lsp-zero.nvim',
-  priority = 100,
+  lazy = true,
+  event = 'BufRead',
   branch = 'v1.x',
   config = function()
     local lsp = require('lsp-zero').preset()

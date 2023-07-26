@@ -1,19 +1,19 @@
 return {
   'nvim-telescope/telescope.nvim',
   tag = '0.1.1',
-  lazy = true,
-  keys = {
-    '<leader>p',
-    '<leader>f',
-    '<leader>ep',
-    '<leader>eu',
-    '<leader>gb',
-    '<leader>gs'
-  },
   dependencies = {
     'nvim-telescope/telescope-project.nvim',
     'nvim-lua/plenary.nvim',
     "debugloop/telescope-undo.nvim",
+  },
+  lazy = true,
+  keys = {
+    '<leader>p',
+    '<leader>f',
+    '<leader>ed',
+    '<leader>es',
+    '<leader>eu',
+    '<leader>ep',
   },
   config = function()
     local telescope = require('telescope')

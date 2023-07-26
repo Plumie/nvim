@@ -1,5 +1,7 @@
 return {
   'hrsh7th/nvim-cmp',
+  lazy = true,
+  event = 'InsertEnter',
   dependencies = {
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-buffer',
@@ -7,7 +9,6 @@ return {
     'saadparwaiz1/cmp_luasnip',
     'rafamadriz/friendly-snippets',
   },
-
   config = function()
     local cmp = require('cmp')
     local cmp_autopairs = require('nvim-autopairs.completion.cmp')
@@ -24,7 +25,7 @@ return {
           keyword_length = 2,
           max_item_count = 8,
         },
-        { name = 'luasnip' },
+        -- { name = 'luasnip' },
       },
       formatting = {
         fields = { 'abbr', 'kind', 'menu' },

@@ -1,7 +1,6 @@
 return {
   'folke/tokyonight.nvim',
   branch = 'main',
-  priority = 1000,
   config = function()
     require('tokyonight').setup({
       transparent = true,

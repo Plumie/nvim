@@ -1,8 +1,5 @@
 return {
   'unblevable/quick-scope',
-  lazy = true,
-  event = 'BufReadCmd',
-
   init = function()
     vim.cmd [[
 			let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
