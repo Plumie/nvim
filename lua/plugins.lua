@@ -13,6 +13,7 @@ require("lazy").setup({
   require('plugins/treesitter'),
   require('plugins/telescope'),
   require('plugins/surround'),
+  require('plugins/early-retirement'),
   require('plugins/fugitive'),
   require('plugins/comment'),
   require('plugins/copilot'),
