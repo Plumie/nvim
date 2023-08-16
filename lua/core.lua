@@ -21,7 +21,7 @@ vim.o.timeout = true
 vim.o.timeoutlen = 300
 vim.o.termguicolors = true
 vim.opt.scrolloff = 2
-vim.opt.sidescrolloff = 8
-vim.o.autoload = true
+vim.opt.sidescrolloff = 6
+vim.opt.cmdheight = 0
 
 require('clipboard')
