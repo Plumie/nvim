@@ -4,6 +4,8 @@ local default = { noremap = true, silent = true }
 vim.keymap.set("n", "<Space>", "<Nop>", default)
 vim.g.mapleader = " "
 
+vim.keymap.set('n', 'x', '"_x', default)
+
 -- Prevent bad practices
 vim.keymap.set('i', '<Left>', '<Nop>', default)
 vim.keymap.set('i', '<Right>', '<Nop>', default)

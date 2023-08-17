@@ -12,22 +12,47 @@ return {
 
     vim.cmd.colorscheme "tokyonight-storm"
 
+    -- Default
+
     vim.cmd [[
-			hi LineNr guibg=none guifg=#ffffff
-			hi CursorLineNr guibg=none guifg=cyan
-			hi Cursor guibg=#ffffff
-			hi Visual guifg=#000000 guibg=#CBC3E3 gui=none
-			hi StatusLine guibg=NONE
-			hi PounceMatch cterm=bold guifg=black guibg=white gui=bold
-			hi PounceGap cterm=bold guifg=black guibg=#CBC3E3 gui=bold
-			hi PounceAccept cterm=bold guifg=black guibg=cyan gui=bold
-			hi PounceAcceptBest cterm=bold guifg=black guibg=cyan gui=bold
-			hi PounceCursor cterm = bold guifg=black guibg=#CBC3E3 gui=bold
-			hi QuickScopePrimary cterm=bold guifg=white guibg=#5f5faf gui=bold
-			hi QuickScopeSecondary cterm=bold guifg=black guibg=cyan gui=bold
-      hi WinSeparator guifg=white
-      hi MiniCursorwordCurrent guibg=none
-      hi MiniCursorword guibg=none cterm=underline gui=underline
+			hi LineNr guibg=none guifg=#E1E3E4
+      hi cursorlinenr guibg=none guifg=#BA9CF3
+      hi visual guifg=#000000 guibg=#E4E3E1 gui=none
+      hi statusline guibg=none
+      hi WinSeparator guifg=E1E3E4
 		]]
+
+    -- Pounce
+
+    vim.cmd [[
+      hi pouncematch cterm=bold guifg=E1E3E4 guibg=none gui=underline
+      hi pouncegap cterm=bold guifg=E1E3E4 guibg=none gui=underline
+      hi pounceaccept cterm=bold guifg=black guibg=#85D3F2 gui=bold
+      hi pounceacceptbest cterm=bold guifg=black guibg=#85D3F2 gui=bold
+      hi pouncecursor cterm = bold guifg=black guibg=#cbc3e3 gui=bold
+    ]]
+
+    -- QuickScope
+
+    vim.cmd [[
+      hi QuickScopePrimary cterm=bold guifg=black guibg=#85D3F2 gui=bold
+			hi QuickScopeSecondary cterm=bold guifg=black guibg=#A5E179 gui=bold
+    ]]
+
+    -- CMP
+    
+    vim.cmd [[
+      hi PmenuSel guibg=#BA9CF3 guifg=#000000
+      hi CmpItemAbbrMatch guifg=#BA9CF3
+      hi CmpItemAbbrMatchFuzzy guifg=#BA9CF3
+      hi CmpItemAbbrMatchFuzzyHighlight guifg=#BA9CF3
+    ]]
+  
+    -- Telescope
+
+    vim.cmd [[
+      hi TelescopeMatching guifg=#BA9CF3
+      hi TelescopeBorder guifg=#BA9CF3
+    ]]
   end
 }

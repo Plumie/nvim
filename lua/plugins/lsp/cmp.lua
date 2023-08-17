@@ -8,11 +8,12 @@ return {
     'L3MON4D3/LuaSnip',
     'saadparwaiz1/cmp_luasnip',
     'rafamadriz/friendly-snippets',
+    'onsails/lspkind.nvim'
   },
   config = function()
     local cmp = require('cmp')
     local cmp_autopairs = require('nvim-autopairs.completion.cmp')
-
+    local lspkind = require('lspkind')
     local ls = require('luasnip')
     require('luasnip.loaders.from_vscode').lazy_load()
     ls.filetype_extend('twig', { 'html' })
@@ -29,6 +30,11 @@ return {
       },
       formatting = {
         fields = { 'abbr', 'kind', 'menu' },
+        format = lspkind.cmp_format({
+          mode = 'symbol',
+          maxwidth = 50,
+          ellipsis_char = '...',
+        })
       },
       mapping = {
         ['<Tab>'] = cmp.mapping.select_next_item(),
@@ -39,7 +45,9 @@ return {
         }),
       },
       window = {
-        completion = cmp.config.window.bordered(),
+        completion = {
+          winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel,Search:None"
+        },
         documentation = cmp.config.window.bordered(),
       },
       snippet = {
