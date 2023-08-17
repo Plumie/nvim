@@ -2,7 +2,6 @@ require("lazy").setup({
   require('plugins/tmux'),
   require('plugins/theme'),
   require('plugins/autopairs'),
-  require('plugins/cellular-automaton'),
   require('plugins/oil'),
   require('plugins/alpha'),
   require('plugins/nvim-web-devicons'),

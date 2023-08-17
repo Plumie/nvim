@@ -26,6 +26,8 @@ return {
 			hi QuickScopePrimary cterm=bold guifg=white guibg=#5f5faf gui=bold
 			hi QuickScopeSecondary cterm=bold guifg=black guibg=cyan gui=bold
       hi WinSeparator guifg=white
+      hi MiniCursorwordCurrent guibg=none
+      hi MiniCursorword guibg=none cterm=underline gui=underline
 		]]
   end
 }
