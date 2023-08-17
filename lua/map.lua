@@ -39,4 +39,4 @@ vim.keymap.set('v', '<S-Tab>', '<<<Esc>gv', default)
 -- Get old pasted text
 vim.keymap.set('n', 'gp', '`[v`]', default)
 
-vim.keymap.set('n', '<Esc>', ':noh<CR>', default)
+vim.keymap.set('n', '<Esc>', '`[v`]', default)

@@ -17,7 +17,7 @@ require("lazy").setup({
   require('plugins/fugitive'),
   require('plugins/comment'),
   require('plugins/copilot'),
-  require('plugins/treesj'),
+  require('plugins/splitjoin'),
   require('plugins/harpoon'),
   require('plugins/gitsigns'),
   require('plugins/move'),
