@@ -8,7 +8,6 @@ vim.opt.autoindent = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.cursorline = true
-vim.opt.background = 'dark'
 vim.opt.signcolumn = 'yes'
 vim.opt.wrap = false
 vim.opt.backspace = "indent,eol,start"
@@ -21,7 +20,5 @@ vim.o.timeout = true
 vim.o.timeoutlen = 300
 vim.o.termguicolors = true
 vim.opt.scrolloff = 2
-vim.opt.sidescrolloff = 6
+vim.opt.sidescrolloff = 8
 vim.opt.cmdheight = 0
-
-require('clipboard')
