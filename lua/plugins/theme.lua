@@ -17,6 +17,7 @@ return {
     vim.cmd [[
 			hi LineNr guibg=none guifg=#E1E3E4
       hi cursorlinenr guibg=none guifg=#BA9CF3
+      hi cursorline guibg=#2A2F38
       hi visual guifg=#000000 guibg=#E4E3E1 gui=none
       hi statusline guibg=none
       hi WinSeparator guifg=white
