@@ -41,7 +41,7 @@ return {
         ['<S-Tab>'] = cmp.mapping.select_prev_item(),
         ['<CR>'] = cmp.mapping.confirm({
           behavior = cmp.ConfirmBehavior.Replace,
-          select = true,
+          select = false,
         }),
       },
       window = {
