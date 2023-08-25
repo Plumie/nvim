@@ -35,10 +35,10 @@ return {
     dashboard.section.header.opts.hl = "Text"
 
     dashboard.section.buttons.val = {
-      dashboard.button("e", "New file", ":ene <BAR> startinsert <CR>"),
-      dashboard.button("p", "Open Project", ":lua require'telescope'.extensions.project.project{}<CR>"),
-      dashboard.button("s", "Settings", ":e $MYVIMRC | :cd %:p:h | :Oil<CR>"),
-      dashboard.button("q", "Quit NVIM", ":qa<CR>"),
+      dashboard.button("e", "> New file", ":ene <BAR> startinsert <CR>"),
+      dashboard.button("p", "> Open Project", ":lua require'telescope'.extensions.project.project{}<CR>"),
+      dashboard.button("s", "> Settings", ":e $MYVIMRC | :cd %:p:h | :Oil<CR>"),
+      dashboard.button("q", "> Quit NVIM", ":qa<CR>"),
     }
 
 
