@@ -41,6 +41,7 @@ return {
       dashboard.button("q", "Quit NVIM", ":qa<CR>"),
     }
 
+
     alpha.setup(dashboard.opts)
   end
 }
