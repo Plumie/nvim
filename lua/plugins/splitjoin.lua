@@ -1,10 +1,10 @@
 return {
-  'echasnovski/mini.splitjoin',
-  init = function()
-    require('mini.splitjoin').setup({
-      mappings = {
-        toggle = '<leader>j',
-      },
+  'Wansmer/treesj',
+  keys = { '<leader>j' },
+  config = function()
+    require('treesj').setup({
+      use_default_keymaps = false,
     })
+    vim.keymap.set('n', '<leader>j', ':TSJToggle<CR>', { noremap = true })
   end,
 }
