@@ -20,7 +20,6 @@ require("lazy").setup({
   require('plugins/splitjoin'),
   require('plugins/harpoon'),
   require('plugins/gitsigns'),
-  require('plugins/move'),
   require('plugins/lsp/nvim-lspconfig'),
   require('plugins/lsp/lsp-zero'),
   require('plugins/lsp/cmp'),
