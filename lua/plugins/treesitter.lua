@@ -30,7 +30,7 @@ return {
       },
       autotag = {
         enable = true,
-        filetypes = { 'html', 'javascript', 'typescriptreact', 'javascriptreact', 'twig' }
+        filetypes = { 'html', 'javascript', 'typescriptreact', 'javascriptreact' }
       }
     })
   end
