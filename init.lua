@@ -1,5 +1,4 @@
 -- Init lazy
-
 require('manager')
 
 -- Core settings
