@@ -15,8 +15,6 @@ return {
     local cmp_autopairs = require('nvim-autopairs.completion.cmp')
     local lspkind = require('lspkind')
     local ls = require('luasnip')
-    require('luasnip.loaders.from_vscode').lazy_load()
-    ls.filetype_extend('twig', { 'html' })
 
     cmp.setup({
       sources = {
@@ -25,8 +23,7 @@ return {
         { name = 'path' },
         {
           name = 'buffer',
-          keyword_length = 2,
-          max_item_count = 8,
+          max_item_count = 2,
         },
       },
       formatting = {
@@ -48,10 +45,7 @@ return {
         }),
       },
       window = {
-        completion = {
-          winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel,Search:None"
-        },
-        documentation = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered({ border = 'rounded' }),
       },
       snippet = {
         expand = function(args)

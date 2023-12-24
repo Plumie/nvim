@@ -13,6 +13,7 @@ require("lazy").setup({
   require('plugins/telescope'),
   require('plugins/surround'),
   require('plugins/early-retirement'),
+  require('plugins/cellular-automaton'),
   require('plugins/colorizer'),
   require('plugins/fugitive'),
   require('plugins/comment'),
