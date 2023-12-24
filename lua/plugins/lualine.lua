@@ -3,8 +3,10 @@ return {
   config = function()
     local theme = require("lualine.themes.palenight")
 
-    theme.normal.c.bg = nil
     theme.normal.b.bg = nil
+    theme.normal.c.bg = nil
+    theme.visual.b.bg = nil
+    theme.insert.b.bg = nil
 
     require('lualine').setup({
       options = {
@@ -14,7 +16,7 @@ return {
       },
       sections = {
         lualine_a = {'mode'},
-        lualine_b = {{'branch', 'diff', 'diagnostics'}},
+        lualine_b = {'branch', 'diff', 'diagnostics'},
         lualine_c = {
           {
             'filename',
