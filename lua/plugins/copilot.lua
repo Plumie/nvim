@@ -1,13 +1,19 @@
-return {
-  'zbirenbaum/copilot.lua',
-  config = function()
-    require('copilot').setup({
-      suggestion = {
-        auto_trigger = true,
-        keymap = {
-          accept = '<leader><Tab>',
-        },
+    return {
+      'zbirenbaum/copilot.lua',
+      dependencies = {
+        'zbirenbaum/copilot-cmp',
       },
-    })
-  end
-}
+      config = function()
+        require('copilot').setup({
+          suggestion = {enabled = false},
+          panel = {enabled = false}
+          -- suggestion = {
+          --   auto_trigger = true,
+          --   keymap = {
+          --     accept = '<leader><Tab>',
+          --   },
+          -- },
+        })
+        require('copilot_cmp').setup()
+      end
+    }

@@ -20,20 +20,23 @@ return {
 
     cmp.setup({
       sources = {
+        { name = 'copilot' },
         { name = 'nvim_lsp' },
+        { name = 'path' },
         {
           name = 'buffer',
           keyword_length = 2,
           max_item_count = 8,
         },
-        -- { name = 'luasnip' },
       },
       formatting = {
         fields = { 'abbr', 'kind', 'menu' },
         format = lspkind.cmp_format({
-          mode = 'symbol',
+          mode = 'symbol_text',
           maxwidth = 50,
-          ellipsis_char = '...',
+          symbol_map = {
+            Copilot = "",
+          }
         })
       },
       mapping = {
