@@ -3,12 +3,12 @@ return {
   ['do'] = ':TSUpdate',
   dependencies = {
     'windwp/nvim-ts-autotag',
+    "nvim-treesitter/nvim-treesitter-textobjects"
   },
+  event = { "BufReadPre", "BufNewFile" },
   config = function()
     require('nvim-treesitter.configs').setup({
       ensure_installed = { 'javascript', 'html', 'typescript', 'css', 'tsx' },
-      sync_install = false,
-      auto_install = true,
       context_commentstring = {
         config = {
           javascript = {
@@ -23,7 +23,6 @@ return {
       },
       highlight = {
         enable = true,
-        disable = { "lua" }
       },
       indent = {
         enable = true
@@ -31,7 +30,34 @@ return {
       autotag = {
         enable = true,
         filetypes = { 'html', 'javascript', 'typescriptreact', 'javascriptreact' }
-      }
+      },
+      incremental_selection = {
+        enable = true,
+        keymaps = {
+          init_selection = "<C-i>",
+          node_incremental = "<C-i>",
+          scope_incremental = false,
+          node_decremental = "<C-k>",
+        },
+      },
+      textobjects = {
+        select = {
+          enable = true,
+          lookahead = true,
+          keymaps = {
+            ["af"] = "@function.outer",
+            ["if"] = "@function.inner",
+            ["ac"] = "@conditional.outer",
+            ["ic"] = "@conditional.inner",
+            ["ia"] = "@parameter.inner",
+            ["aa"] = "@parameter.outer",
+            ["al"] = "@loop.outer",
+            ["il"] = "@loop.inner",
+            ["iv"] = "@variable",
+            ["av"] = "@variable",
+          }
+        },
+      },
     })
   end
 }
