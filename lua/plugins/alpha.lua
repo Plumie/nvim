@@ -32,7 +32,7 @@ return {
       "    ⠅⠅⠅⡂⡂⡂⡂⢀⠀⠅⡂⡂⠌⡂⡂⠌⡂⠌⡂⠌⡂⡂⠌⠌⠌⠌⠌⡐⡐⠨⠨⠨⢐⠨⠨⢐⢐⢐⠠⢑⢈⠪⣐⢈⠀⠀⡀⠐⠀⠀",
     }
 
-    dashboard.section.header.opts.hl = "Text"
+    dashboard.section.header.opts.hl = "Function"
 
     dashboard.section.buttons.val = {
       dashboard.button("e", "> New file", ":ene <BAR> startinsert <CR>"),
