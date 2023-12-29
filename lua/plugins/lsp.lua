@@ -1,21 +1,23 @@
 return {
-  'VonHeikemen/lsp-zero.nvim',
+  'vonHeikemen/lsp-zero.nvim', 
   branch = 'v3.x',
+  dependencies = {
+    'neovim/nvim-lspconfig',
+  },
   config = function()
-    local lsp = require('lsp-zero').preset()
-    lsp.extend_lspconfig()
+    local lsp_zero = require('lsp-zero')
 
-    lsp.on_attach(function(_, bufnr)
-      lsp.default_keymaps({ buffer = bufnr })
+    lsp_zero.on_attach(function(client, bufnr)
+      lsp_zero.default_keymaps({buffer = bufnr})
     end)
+    
+    -- Diagnostics
 
     local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
     for type, icon in pairs(signs) do
       local hl = "DiagnosticSign" .. type
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
     end
-
-    lsp.setup()
 
     vim.diagnostic.config({
       virtual_text = {
@@ -25,5 +27,6 @@ return {
     })
 
     vim.api.nvim_command('autocmd CursorHold * lua vim.diagnostic.open_float({scope="line"})')
+
   end
 }

@@ -1,20 +1,17 @@
 return {
   'hrsh7th/nvim-cmp',
-  lazy = true,
   event = 'InsertEnter',
   dependencies = {
-    'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-nvim-lsp',
     'L3MON4D3/LuaSnip',
-    'saadparwaiz1/cmp_luasnip',
-    'rafamadriz/friendly-snippets',
     'onsails/lspkind.nvim'
   },
   config = function()
     local cmp = require('cmp')
-    local cmp_autopairs = require('nvim-autopairs.completion.cmp')
     local lspkind = require('lspkind')
-    local ls = require('luasnip')
+    local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 
     cmp.setup({
       sources = {
@@ -29,7 +26,7 @@ return {
       formatting = {
         fields = { 'abbr', 'kind', 'menu' },
         format = lspkind.cmp_format({
-          mode = 'symbol_text',
+          mode = 'symbol',
           maxwidth = 50,
           symbol_map = {
             Copilot = "",
@@ -43,9 +40,6 @@ return {
           behavior = cmp.ConfirmBehavior.Replace,
           select = false,
         }),
-      },
-      window = {
-        documentation = cmp.config.window.bordered({ border = 'rounded' }),
       },
       snippet = {
         expand = function(args)

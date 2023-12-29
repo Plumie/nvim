@@ -1,4 +1,8 @@
 require("lazy").setup({
+  require('plugins/mason'),
+  require('plugins/lsp'),
+  require('plugins/cmp'),
+  require('plugins/copilot'),
   require('plugins/tmux'),
   require('plugins/theme'),
   require('plugins/nvim-web-devicons'),
@@ -20,12 +24,4 @@ require("lazy").setup({
   require('plugins/gitsigns'),
   require('plugins/early-retirement'),
   require('plugins/cellular-automaton'),
-  require('plugins/lsp/nvim-lspconfig'),
-  require('plugins/lsp/lsp-zero'),
-  require('plugins/lsp/cmp'),
-  require('plugins/lsp/mason-lspconfig'),
-  require('plugins/lsp/mason'),
-  require('plugins/lsp/null-ls'),
-  require('plugins/tsc'),
-  require('plugins/copilot'),
 })
