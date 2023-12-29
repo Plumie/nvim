@@ -31,15 +31,6 @@ return {
         enable = true,
         filetypes = { 'html', 'javascript', 'typescriptreact', 'javascriptreact' }
       },
-      incremental_selection = {
-        enable = true,
-        keymaps = {
-          init_selection = "<C-i>",
-          node_incremental = "<C-i>",
-          scope_incremental = false,
-          node_decremental = "<C-k>",
-        },
-      },
       textobjects = {
         select = {
           enable = true,

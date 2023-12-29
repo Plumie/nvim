@@ -1,12 +1,11 @@
 return {
   'VonHeikemen/lsp-zero.nvim',
-  lazy = true,
-  event = 'BufRead',
-  branch = 'v1.x',
+  branch = 'v3.x',
   config = function()
     local lsp = require('lsp-zero').preset()
+    lsp.extend_lspconfig()
 
-    lsp.on_attach(function(client, bufnr)
+    lsp.on_attach(function(_, bufnr)
       lsp.default_keymaps({ buffer = bufnr })
     end)
 
@@ -20,7 +19,7 @@ return {
 
     vim.diagnostic.config({
       virtual_text = {
-        prefix = '●', -- Could be '■', '▎', 'x'
+        prefix = '●',
       },
       severity_sort = true,
     })
