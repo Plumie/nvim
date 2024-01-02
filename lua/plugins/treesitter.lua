@@ -38,14 +38,14 @@ return {
           keymaps = {
             ["af"] = "@function.outer",
             ["if"] = "@function.inner",
-            ["ac"] = "@conditional.outer",
-            ["ic"] = "@conditional.inner",
+            ["ac"] = "@call.outer",
+            ["ic"] = "@call.inner",
+            ["ai"] = "@conditional.outer",
+            ["ii"] = "@conditional.inner",
             ["ia"] = "@parameter.inner",
             ["aa"] = "@parameter.outer",
             ["al"] = "@loop.outer",
             ["il"] = "@loop.inner",
-            ["iv"] = "@variable",
-            ["av"] = "@variable",
           }
         },
       },
