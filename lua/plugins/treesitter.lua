@@ -47,7 +47,6 @@ return {
             ["al"] = "@loop.outer",
             ["il"] = "@loop.inner",
           },
-          include_surrounding_whitespace = true,
         },
       },
     })
