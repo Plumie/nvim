@@ -64,6 +64,7 @@ return {
       { noremap = true, silent = true }
     )
 
+    -- Undo tree
     vim.api.nvim_set_keymap(
       'n',
       '<leader>eu',
