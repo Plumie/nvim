@@ -46,7 +46,8 @@ return {
             ["aa"] = "@parameter.outer",
             ["al"] = "@loop.outer",
             ["il"] = "@loop.inner",
-          }
+          },
+          include_surrounding_whitespace = true,
         },
       },
     })
