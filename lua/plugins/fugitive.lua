@@ -1,6 +1,9 @@
 return {
   'tpope/vim-fugitive',
-  keys = { 
+  cmd = {
+    'G'
+  },
+  keys = {
     {
       '<leader>go',
       '<cmd>G<CR>',
