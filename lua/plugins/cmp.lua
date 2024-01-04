@@ -1,4 +1,4 @@
-return {
+  return {
   'hrsh7th/nvim-cmp',
   event = 'InsertEnter',
   dependencies = {
@@ -33,6 +33,9 @@ return {
           }
         })
       },
+      window = {
+        documentation = cmp.config.window.bordered()
+      },
       mapping = {
         ['<Tab>'] = cmp.mapping.select_next_item(),
         ['<S-Tab>'] = cmp.mapping.select_prev_item(),
@@ -40,14 +43,6 @@ return {
           behavior = cmp.ConfirmBehavior.Replace,
           select = false,
         }),
-      },
-      snippet = {
-        expand = function(args)
-          if not ls then
-            return
-          end
-          ls.lsp_expand(args.body)
-        end,
       },
     })
 
