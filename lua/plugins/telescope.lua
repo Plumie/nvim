@@ -25,11 +25,6 @@ return {
       '<cmd>lua require("telescope.builtin").live_grep()<cr>',
       desc = 'Find in files'
     },
-    {
-      '<leader>ed',
-      '<cmd>lua require("telescope.builtin").diagnostics()<cr>',
-      desc = 'Open diagnostics'
-    }
   },
   init = function()
     vim.cmd [[

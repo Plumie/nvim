@@ -24,15 +24,12 @@
       formatting = {
         fields = { 'abbr', 'kind', 'menu' },
         format = lspkind.cmp_format({
-          mode = 'symbol',
+          mode = 'symbol_text',
           maxwidth = 50,
           symbol_map = {
             Copilot = "",
           }
         })
-      },
-      window = {
-        documentation = cmp.config.window.bordered()
       },
       mapping = {
         ['<Tab>'] = cmp.mapping.select_next_item(),
