@@ -17,7 +17,6 @@ vim.opt.scrolloff = 2
 vim.opt.sidescrolloff = 8
 vim.opt.cmdheight = 0
 vim.opt.clipboard = "unnamedplus"
-
 vim.o.hlsearch = true
 vim.o.mouse = 'a'
 vim.o.undofile = true
