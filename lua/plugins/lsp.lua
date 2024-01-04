@@ -9,5 +9,17 @@ return {
     lsp_zero.on_attach(function(_, bufnr)
       lsp_zero.default_keymaps({buffer = bufnr})
     end)
+
+    require('lspconfig').lua_ls.setup({
+      settings = {
+        Lua = {
+          diagnostics = {
+            globals = {
+              "vim",
+            },
+          },
+        },
+      },
+    })
   end
 }

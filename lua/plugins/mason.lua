@@ -1,5 +1,6 @@
 return {
   "williamboman/mason.nvim",
+  priority = 51,
   dependencies = {
     "williamboman/mason-lspconfig.nvim",
   },
