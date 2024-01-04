@@ -1,5 +1,5 @@
 # Sentinel
-My Neovim setup written in Lua with LSP support and a simple UI, keeping things light and simple.    
+Personal Neovim config written in Lua with LSP support and a simple UI, keeping things light and simple.    
 
 ![preview](./preview.png)
 
@@ -10,4 +10,4 @@ My Neovim setup written in Lua with LSP support and a simple UI, keeping things 
 - C compiler *(for nvim-treesitter)*
 - Terminal with true color support *(I use Kitty)*
 - Nerd fonts
-- Tmux *(Optional)*
+- TMUX *(Optional)*
