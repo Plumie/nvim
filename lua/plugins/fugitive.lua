@@ -1,8 +1,20 @@
 return {
   'tpope/vim-fugitive',
-  config = function()
-    vim.keymap.set("n", "<leader>go", ':G<CR>')
-    vim.keymap.set("n", "<leader>gps", ':G push<CR>')
-    vim.keymap.set("n", "<leader>gpl", ':G pull<CR>')
-  end
+  keys = { 
+    {
+      '<leader>go',
+      '<cmd>G<CR>',
+      desc = "Open fugitive"
+    },
+    {
+      '<leader>gps',
+      '<cmd>G push<CR>',
+      desc = "Push commit"
+    },
+    {
+      '<leader>gpl',
+      '<cmd>G pull',
+      desc = "Pull commit"
+    }
+  },
 }
