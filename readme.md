@@ -1,4 +1,4 @@
-# Sentinel
+# Plume's NVIM config
 Personal Neovim config written in Lua with LSP support and a simple UI, keeping things light and simple.    
 
 ![preview](./preview.png)
