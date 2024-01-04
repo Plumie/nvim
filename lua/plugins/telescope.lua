@@ -31,7 +31,6 @@ return {
       desc = 'Open diagnostics'
     }
   },
-  config = true,
   init = function()
     vim.cmd [[
       hi TelescopeMatching guifg=#BA9CF3

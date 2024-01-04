@@ -1,6 +1,5 @@
 return {
   'rlane/pounce.nvim',
-  lazy = true,
   keys = {
     {
       's',

@@ -27,5 +27,4 @@ return {
       lualine_z = {}
     }
   },
-  config = true
 }

@@ -1,9 +1,7 @@
 return {
   'goolord/alpha-nvim',
-  config = function()
-    local alpha = require('alpha')
+  opts = function()
     local dashboard = require('alpha.themes.dashboard')
-
     dashboard.section.header.val = {
       "    ⠀⠀⠀⠀⠀⢀⠔⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⡀⢄⠄⢄⢄⠤⡠⡠⡠⣀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
       "    ⠀⠀⡂⠂⠌⠠⠀⠂⠄⠀⠀⠀⠀⠀⠀⠀⠀⢀⠠⡐⠄⢕⢑⠔⢌⠢⡑⡱⡐⡑⡌⢌⠪⡘⠜⡜⡔⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
@@ -30,14 +28,11 @@ return {
       "    ⠢⠨⠨⢐⢐⢐⢐⢐⠨⠨⢐⢐⠨⢐⢐⠨⢐⠨⢐⠨⢐⢐⠨⠨⠨⠨⠨⢐⢐⠠⠀⠨⢐⠨⠨⢐⢐⠠⡑⠌⡄⠈⠀⠀⠀⢀⠀⠀⠂⠀",
       "    ⠅⠅⠅⡂⡂⡂⡂⢀⠀⠅⡂⡂⠌⡂⡂⠌⡂⠌⡂⠌⡂⡂⠌⠌⠌⠌⠌⡐⡐⠨⠨⠨⢐⠨⠨⢐⢐⢐⠠⢑⢈⠪⣐⢈⠀⠀⡀⠐⠀⠀",
     }
-
     dashboard.section.header.opts.hl = "Text"
-
     dashboard.section.buttons.val = {
       dashboard.button("e", "> New file", ":ene <BAR> startinsert <CR>"),
       dashboard.button("s", "> Settings", ":e $MYVIMRC | :cd %:p:h | :Oil <CR>"),
     }
-
-    alpha.setup(dashboard.opts)
+    return dashboard.opts
   end
 }

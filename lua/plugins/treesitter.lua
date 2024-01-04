@@ -6,6 +6,7 @@ return {
     "nvim-treesitter/nvim-treesitter-textobjects"
   },
   event = { "BufReadPre", "BufNewFile" },
+  main = 'nvim-treesitter.configs',
   opts = {
     ensure_installed = { 'javascript', 'html', 'typescript', 'css', 'tsx' },
     context_commentstring = {
@@ -49,7 +50,4 @@ return {
       },
     },
   },
-  config = function(_, opts)
-    require('nvim-treesitter.configs').setup(opts)
-  end
 }

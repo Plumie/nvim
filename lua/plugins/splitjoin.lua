@@ -10,5 +10,4 @@ return {
   opts = {
     use_default_keymaps = false,
   },
-  config = true
 }

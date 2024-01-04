@@ -10,5 +10,4 @@ return {
     suggestion = {enabled = false},
     panel = {enabled = false}
   },
-  config = true
 }

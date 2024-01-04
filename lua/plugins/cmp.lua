@@ -6,14 +6,12 @@
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-nvim-lsp',
     'L3MON4D3/LuaSnip',
-    'onsails/lspkind.nvim'
+    'onsails/lspkind.nvim',
   },
-  config = function()
-    local cmp = require('cmp')
+  opts = function()
     local lspkind = require('lspkind')
-    local cmp_autopairs = require('nvim-autopairs.completion.cmp')
-
-    cmp.setup({
+    local cmp = require('cmp')
+    return {
       sources = {
         { name = 'copilot' },
         { name = 'nvim_lsp' },
@@ -43,9 +41,12 @@
           behavior = cmp.ConfirmBehavior.Replace,
           select = false,
         }),
-      },
-    })
-
+      }
+    }
+  end,
+  init = function()
+    local cmp = require('cmp')
+    local cmp_autopairs = require('nvim-autopairs.completion.cmp')
     cmp.event:on(
       'confirm_done',
       cmp_autopairs.on_confirm_done()

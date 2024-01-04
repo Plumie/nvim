@@ -7,10 +7,9 @@ return {
       floats = "transparent",
     },
   },
-  config = true,
   init = function()
-    vim.cmd.colorscheme "tokyonight-storm"
     vim.cmd [[
+      colorscheme tokyonight-storm
 			hi LineNr guibg=none guifg=#E1E3E4
       hi cursorlinenr guibg=none guifg=#BA9CF3
       hi cursorline guibg=#31304D

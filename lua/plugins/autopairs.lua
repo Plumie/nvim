@@ -5,5 +5,4 @@ return {
   opts = {
     check_ts =  true,
   },
-  config = true
 }

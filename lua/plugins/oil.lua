@@ -1,5 +1,6 @@
 return {
   'stevearc/oil.nvim',
+  lazy = false,
   opts = {
     buf_options = {
       buflisted = false
@@ -11,8 +12,6 @@ return {
       ["\\"] = "actions.parent"
     }
   },
-  config = true,
-  lazy = false,
   keys = {
     {
       '<leader>eo',
