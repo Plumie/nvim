@@ -10,7 +10,7 @@ keymap.set('n', 'x', '"_x', default)
 
 -- Buffer management
 keymap.set('n', '<leader>q', ':bdelete!<CR>', default)
-keymap.set('n', '<leader>w', ':w!<CR>', default)
+keymap.set('n', '<leader>w', ':silent! w<CR>', default)
 
 -- Window management
 keymap.set('n', 'vs', ':vs<CR><C-w>l', default)
