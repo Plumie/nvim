@@ -2,8 +2,8 @@ return {
   'nvim-treesitter/nvim-treesitter',
   ['do'] = ':TSUpdate',
   dependencies = {
-    'windwp/nvim-ts-autotag',
-    "nvim-treesitter/nvim-treesitter-textobjects"
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    "RRethy/nvim-treesitter-textsubjects"
   },
   event = { "BufReadPre", "BufNewFile" },
   main = 'nvim-treesitter.configs',
@@ -27,10 +27,6 @@ return {
     indent = {
       enable = true
     },
-    autotag = {
-      enable = true,
-      filetypes = { 'html', 'javascript', 'typescriptreact', 'javascriptreact' }
-    },
     textobjects = {
       select = {
         enable = true,
@@ -47,6 +43,15 @@ return {
           ["al"] = "@loop.outer",
           ["il"] = "@loop.inner",
         },
+      },
+    },
+    textsubjects = {
+      enable = true,
+      prev_selection = '<BS>',
+      keymaps = {
+        ['<CR>'] = 'textsubjects-smart',
+        [';'] = 'textsubjects-container-outer',
+        ['i;'] = 'textsubjects-container-inner',
       },
     },
   },

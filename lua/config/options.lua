@@ -55,3 +55,7 @@ vim.diagnostic.config({
 })
 
 vim.api.nvim_command('autocmd CursorHold * lua vim.diagnostic.open_float({scope="line"})')
+
+vim.api.nvim_create_user_command('W', 'w', {})
+vim.api.nvim_create_user_command('Qa', 'qa', {})
+vim.api.nvim_create_user_command('Q', 'q', {})
