@@ -59,5 +59,6 @@ vim.api.nvim_command('autocmd CursorHold * lua vim.diagnostic.open_float({scope=
 vim.cmd[[
   command! -bang Q q<bang>
   command! -bang Qa qa<bang>
+  command! -bang QA qa<bang>
   command! W w
 ]]
