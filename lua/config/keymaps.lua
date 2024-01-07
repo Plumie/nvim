@@ -11,6 +11,9 @@ keymap.set('n', 'x', '"_x', default)
 -- Delete every lines in a file
 keymap.set('n', 'DD', 'ggVGd', default)
 
+-- Exit inset mode
+keymap.set('i', 'jo', '<Esc>', default)
+
 -- Buffer management
 keymap.set('n', '<leader>q', ':bdelete!<CR>', default)
 keymap.set('n', '<leader>w', ':silent! w<CR>', default)

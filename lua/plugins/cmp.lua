@@ -35,9 +35,6 @@
           }
         })
       },
-      completion = {
-        keyword_length = 2,
-      },
       mapping = {
         ['<Tab>'] = cmp.mapping.select_next_item(),
         ['<S-Tab>'] = cmp.mapping.select_prev_item(),

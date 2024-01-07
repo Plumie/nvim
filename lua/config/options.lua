@@ -36,6 +36,8 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.splitkeep = "cursor"
 
+vim.opt.updatetime = 1000
+
 vim.opt.wildignore:append({ "*/node_modules/*" })
 
 vim.opt.mouse = ''
@@ -54,11 +56,14 @@ vim.diagnostic.config({
   severity_sort = true,
 })
 
-vim.api.nvim_command('autocmd CursorHold * lua vim.diagnostic.open_float({scope="line"})')
-
+-- Remap quit and save to prevent typos
 vim.cmd[[
   command! -bang Q q<bang>
   command! -bang Qa qa<bang>
   command! -bang QA qa<bang>
   command! W w
 ]]
+
+-- Prevent comments from continuing on new line
+vim.cmd('autocmd BufEnter * set formatoptions-=cro')
+vim.cmd('autocmd BufEnter * setlocal formatoptions-=cro')
