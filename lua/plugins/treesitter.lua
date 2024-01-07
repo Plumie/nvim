@@ -2,6 +2,7 @@ return {
   'nvim-treesitter/nvim-treesitter',
   ['do'] = ':TSUpdate',
   dependencies = {
+    'windwp/nvim-ts-autotag',
     "nvim-treesitter/nvim-treesitter-textobjects",
     "RRethy/nvim-treesitter-textsubjects"
   },
@@ -9,6 +10,10 @@ return {
   main = 'nvim-treesitter.configs',
   opts = {
     ensure_installed = { 'javascript', 'html', 'typescript', 'css', 'tsx' },
+    autotag = {
+      enable = true,
+      filetypes = { 'html', 'javascript', 'typescriptreact', 'javascriptreact' }
+    },
     context_commentstring = {
       config = {
         javascript = {
