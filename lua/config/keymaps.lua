@@ -8,6 +8,9 @@ vim.g.mapleader = " "
 -- Prevent X from yanking to clipboard
 keymap.set('n', 'x', '"_x', default)
 
+-- Delete every lines in a file
+keymap.set('n', '<leader>df', 'ggVGd', default)
+
 -- Buffer management
 keymap.set('n', '<leader>q', ':bdelete!<CR>', default)
 keymap.set('n', '<leader>w', ':silent! w<CR>', default)
