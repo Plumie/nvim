@@ -2,7 +2,7 @@ return {
   'Wansmer/treesj',
   keys = {
     {
-      '<leader>j',
+      '<leader>sj',
       '<cmd>lua require("treesj").toggle()<CR>',
       desc = 'Toggle treesitter join/split',
     },
