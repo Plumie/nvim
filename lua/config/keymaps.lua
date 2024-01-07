@@ -9,7 +9,7 @@ vim.g.mapleader = " "
 keymap.set('n', 'x', '"_x', default)
 
 -- Delete every lines in a file
-keymap.set('n', '<leader>df', 'ggVGd', default)
+keymap.set('n', 'DD', 'ggVGd', default)
 
 -- Buffer management
 keymap.set('n', '<leader>q', ':bdelete!<CR>', default)
