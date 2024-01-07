@@ -15,10 +15,10 @@ keymap.set('n', '<leader>w', ':silent! w<CR>', default)
 -- Window management
 keymap.set('n', 'vs', ':vs<CR><C-w>l', default)
 keymap.set('n', 'vd', ':split<CR><C-w>j', default)
-keymap.set("n", "<leader>ah", "<C-w>10>")
-keymap.set("n", "<leader>al", "<C-w>10<")
-keymap.set("n", "<leader>aj", "<C-w>10-")
-keymap.set("n", "<leader>ak", "<C-w>10+")
+keymap.set("n", "<leader>vh", "<C-w>10>")
+keymap.set("n", "<leader>vl", "<C-w>10<")
+keymap.set("n", "<leader>vj", "<C-w>10-")
+keymap.set("n", "<leader>vk", "<C-w>10+")
 
 -- Scroll and center
 keymap.set('n', '<C-d>', '<C-d>zz', default)
