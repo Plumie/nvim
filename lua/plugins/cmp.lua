@@ -7,6 +7,7 @@
     'hrsh7th/cmp-nvim-lsp',
     'L3MON4D3/LuaSnip',
     'onsails/lspkind.nvim',
+    'https://github.com/hrsh7th/cmp-emoji'
   },
   opts = function()
     local lspkind = require('lspkind')
@@ -20,6 +21,9 @@
           name = 'buffer',
           max_item_count = 2,
         },
+        {
+          name = 'emoji'
+        }
       },
       formatting = {
         fields = { 'abbr', 'kind', 'menu' },
