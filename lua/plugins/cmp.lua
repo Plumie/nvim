@@ -7,14 +7,13 @@
     'hrsh7th/cmp-nvim-lsp',
     'L3MON4D3/LuaSnip',
     'onsails/lspkind.nvim',
-    'https://github.com/hrsh7th/cmp-emoji'
+    'hrsh7th/cmp-emoji'
   },
   opts = function()
     local lspkind = require('lspkind')
     local cmp = require('cmp')
     return {
       sources = {
-        { name = 'copilot' },
         { name = 'nvim_lsp' },
         { name = 'path' },
         {
@@ -30,10 +29,10 @@
         format = lspkind.cmp_format({
           mode = 'symbol_text',
           maxwidth = 50,
-          symbol_map = {
-            Copilot = "",
-          }
         })
+      },
+      completion = {
+        keyword_length = 1,
       },
       mapping = {
         ['<Tab>'] = cmp.mapping.select_next_item(),
