@@ -16,7 +16,7 @@ return {
     },
     {
       '<leader>gpl',
-      '<cmd>G pull',
+      '<cmd>G pull<CR>',
       desc = "Pull commit"
     }
   },
