@@ -2,12 +2,12 @@ return {
   'folke/trouble.nvim',
   keys = {
     {
-      '<leader>dow',
+      '<leader>dw',
       '<cmd>TroubleToggle workspace_diagnostics<CR>',
       desc = 'Open workspace diagnostics'
     },
     {
-      '<leader>doq',
+      '<leader>dq',
       '<cmd>TroubleToggle quickfix<CR>',
       desc = 'Open quickfix diagnostics'
     },

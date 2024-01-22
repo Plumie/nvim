@@ -21,15 +21,15 @@ return {
       desc = 'Code format'
     },
     {
-      'D',
-      '<cmd>lua vim.lsp.buf.type_definition()<CR>',
-      desc = 'Code format'
+      'J',
+      '<cmd>lua vim.diagnostic.open_float()<CR>',
+      desc = 'Type Definition'
     },
   },
   config = function()
     local lsp_zero = require('lsp-zero')
     lsp_zero.on_attach(function(_, bufnr)
-      lsp_zero.default_keymaps({buffer = bufnr})
+      lsp_zero.default_keymaps({ buffer = bufnr })
     end)
 
     require('lspconfig').lua_ls.setup({
