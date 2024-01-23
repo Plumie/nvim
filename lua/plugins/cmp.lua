@@ -5,15 +5,31 @@
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-nvim-lsp',
-    'L3MON4D3/LuaSnip',
+    {
+      'L3MON4D3/LuaSnip',
+      keys = {
+        {
+          mode = 'i',
+          '<C-d>',
+          '<cmd>lua require("luasnip").jump(1)<CR>',
+        },
+        {
+          mode = 'i',
+          '<C-u>',
+          '<cmd>lua require("luasnip").jump(-1)<CR>',
+        },
+      }
+    },
     'onsails/lspkind.nvim',
-    'hrsh7th/cmp-emoji'
+    'hrsh7th/cmp-emoji',
+    'saadparwaiz1/cmp_luasnip'
   },
   opts = function()
     local lspkind = require('lspkind')
     local cmp = require('cmp')
     return {
       sources = {
+        { name = 'luasnip' },
         { name = 'nvim_lsp' },
         { name = 'path' },
         {
@@ -41,7 +57,12 @@
           behavior = cmp.ConfirmBehavior.Replace,
           select = false,
         }),
-      }
+      },
+      snippet = {
+        expand = function(args)
+          require'luasnip'.lsp_expand(args.body)
+        end
+      },
     }
   end,
 }
