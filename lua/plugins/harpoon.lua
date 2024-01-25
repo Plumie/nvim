@@ -12,23 +12,23 @@ return {
       desc = 'Toggle harpoon menu'
     },
     {
-      '<leader>1',
+      '1',
       '<cmd>lua require("harpoon.ui").nav_file(1)<CR>',
     },
     {
-      '<leader>2',
+      '2',
       '<cmd>lua require("harpoon.ui").nav_file(2)<CR>',
     },
     {
-      '<leader>3',
+      '3',
       '<cmd>lua require("harpoon.ui").nav_file(3)<CR>',
     },
     {
-      '<leader>4',
+      '4',
       '<cmd>lua require("harpoon.ui").nav_file(4)<CR>',
     },
     {
-      '<leader>5',
+      '5',
       '<cmd>lua require("harpoon.ui").nav_file(5)<CR>',
     },
   }
