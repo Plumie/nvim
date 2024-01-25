@@ -1,18 +1,18 @@
-local s = require('snippets/snip')
+local _ = require('snippets/base')
 
-s.ls.add_snippets('typescriptreact', {
+_.ls.add_snippets('typescriptreact', {
   -- React Component
-  s.s("FC", {
-    s.t({"const "}), s.i(1), s.t({" = () => {"}),
-    s.t({"", "  return ("}), s.i(0), s.t({")"}),
-    s.t({"", "}"}),
-    s.t({"", ""}),
-    s.t({"", "export default "}), s.ri(1), s.t({";"}),
+  _.s("FC", {
+    _.t({"const "}), _.i(1), _.t({" = () => {"}),
+    _.t({"", "  return ("}), _.i(0), _.t({")"}),
+    _.t({"", "}"}),
+    _.t({"", ""}),
+    _.t({"", "export default "}), _.ri(1), _.t({";"}),
   }),
   -- Component Props
-  s.s("Props", {
-    s.t({"interface Props {"}),
-    s.t({"", "  "}), s.i(0),
-    s.t({"", "}"}),
+  _.s("Props", {
+    _.t({"interface Props {"}),
+    _.t({"", "  "}), _.i(0),
+    _.t({"", "}"}),
   })
 })

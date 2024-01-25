@@ -10,12 +10,12 @@
       keys = {
         {
           mode = 'i',
-          '<C-d>',
+          '<C-l>',
           '<cmd>lua require("luasnip").jump(1)<CR>',
         },
         {
           mode = 'i',
-          '<C-u>',
+          '<C-h>',
           '<cmd>lua require("luasnip").jump(-1)<CR>',
         },
       }
