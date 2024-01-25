@@ -23,7 +23,7 @@ return {
     {
       'J',
       '<cmd>lua vim.diagnostic.open_float()<CR>',
-      desc = 'Type Definition'
+      desc = 'Open diagnostic'
     },
   },
   config = function()
