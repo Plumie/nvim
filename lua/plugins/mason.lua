@@ -17,7 +17,9 @@ return {
     local lsp_zero = require('lsp-zero')
 
     require('mason').setup(opts)
+
     lsp_zero.extend_lspconfig()
+
     require('mason-lspconfig').setup({
       automatic_installation = true,
       handlers = {

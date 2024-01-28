@@ -36,8 +36,8 @@ keymap.set('n', 'gp', '`[v`]', default)
 keymap.set('n', '<Esc>', '`[v`]', default)
 
 -- Increment and decrement
-keymap.set("n", "+", "<C-a>")
-keymap.set("n", "-", "<C-x>")
+keymap.set("n", "+", "<C-a>", default)
+keymap.set("n", "-", "<C-x>", default)
 
 -- Discipline
 keymap.set('i', '<Left>', '<Nop>', default)
