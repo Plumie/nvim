@@ -14,5 +14,9 @@ _.ls.add_snippets('typescriptreact', {
     _.t({"interface Props {"}),
     _.t({"", "  "}), _.i(0),
     _.t({"", "}"}),
-  })
+  }),
+
+  _.s("cn", {
+    _.t({"className={'"}), _.i(1), _.t({"'}"}),
+  }),
 })

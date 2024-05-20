@@ -18,10 +18,10 @@ keymap.set('n', '<leader>w', ':silent! w<CR>', default)
 -- Window management
 keymap.set('n', 'vs', ':vs<CR><C-w>l', default)
 keymap.set('n', 'vd', ':split<CR><C-w>j', default)
-keymap.set("n", "<leader>vh", "<C-w>10>")
-keymap.set("n", "<leader>vl", "<C-w>10<")
-keymap.set("n", "<leader>vj", "<C-w>10-")
-keymap.set("n", "<leader>vk", "<C-w>10+")
+keymap.set("n", "<leader>ah", "<C-w>10>")
+keymap.set("n", "<leader>al", "<C-w>10<")
+keymap.set("n", "<leader>aj", "<C-w>10-")
+keymap.set("n", "<leader>ak", "<C-w>11+")
 
 -- Scroll and center
 keymap.set('n', '<C-d>', '<C-d>zz', default)
@@ -33,11 +33,13 @@ keymap.set('v', '<S-Tab>', '<<<Esc>gv', default)
 
 -- Get old pasted text
 keymap.set('n', 'gp', '`[v`]', default)
-keymap.set('n', '<Esc>', '`[v`]', default)
 
 -- Increment and decrement
 keymap.set("n", "+", "<C-a>", default)
 keymap.set("n", "-", "<C-x>", default)
+
+-- JK
+keymap.set('i', 'jk', '<Esc>', default)
 
 -- Discipline
 keymap.set('i', '<Left>', '<Nop>', default)
