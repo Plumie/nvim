@@ -13,15 +13,11 @@ keymap.set('n', 'DD', 'ggVGd', default)
 
 -- Buffer management
 keymap.set('n', '<leader>q', ':bdelete!<CR>', default)
-keymap.set('n', '<leader>w', ':silent! w<CR>', default)
+keymap.set('n', '<leader>w', ':silent! w!<CR>', default)
 
 -- Window management
 keymap.set('n', 'vs', ':vs<CR><C-w>l', default)
 keymap.set('n', 'vd', ':split<CR><C-w>j', default)
-keymap.set("n", "<leader>ah", "<C-w>10>")
-keymap.set("n", "<leader>al", "<C-w>10<")
-keymap.set("n", "<leader>aj", "<C-w>10-")
-keymap.set("n", "<leader>ak", "<C-w>11+")
 
 -- Scroll and center
 keymap.set('n', '<C-d>', '<C-d>zz', default)
