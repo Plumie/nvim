@@ -1,16 +1,17 @@
 return {
-  'folke/trouble.nvim',
+  "folke/trouble.nvim",
   keys = {
     {
-      '<leader>dw',
-      '<cmd>TroubleToggle workspace_diagnostics<CR>',
-      desc = 'Open workspace diagnostics'
-    },
-    {
-      '<leader>dq',
-      '<cmd>TroubleToggle quickfix<CR>',
-      desc = 'Open quickfix diagnostics'
-    },
+      "<leader>xx",
+      "<cmd>Trouble qflist toggle<cr>",
+      desc = "Quickfix List (Trouble)",
+    }
   },
-  config = true,
+  opts = {
+    focus = true,
+    win = {
+      relative = "editor",
+      size = {height = 0.4}
+    }
+  },
 }
