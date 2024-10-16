@@ -2,43 +2,43 @@
   'hrsh7th/nvim-cmp',
   event = 'InsertEnter',
   dependencies = {
-    'hrsh7th/cmp-buffer',
-    'hrsh7th/cmp-path',
-    'hrsh7th/cmp-nvim-lsp',
     {
       'L3MON4D3/LuaSnip',
-      keys = {
-        {
-          mode = 'i',
-          '<C-l>',
-          '<cmd>lua require("luasnip").jump(1)<CR>',
-        },
-        {
-          mode = 'i',
-          '<C-h>',
-          '<cmd>lua require("luasnip").jump(-1)<CR>',
-        },
-      }
+      build = (function()
+        if vim.fn.has 'win32' == 1 or vim.fn.executable 'make' == 0 then
+          return
+        end
+        return 'make install_jsregexp'
+      end)(),
+      dependencies = {
+        'rafamadriz/friendly-snippets',
+      },
     },
-    'onsails/lspkind.nvim',
-    'hrsh7th/cmp-emoji',
-    'saadparwaiz1/cmp_luasnip'
+    'saadparwaiz1/cmp_luasnip',
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-buffer',
+    'onsails/lspkind-nvim',
   },
   opts = function()
-    local lspkind = require('lspkind')
     local cmp = require('cmp')
+    local lspkind = require('lspkind')
+    local luasnip = require ('luasnip')
+    luasnip.config.setup()
     return {
+      snippet = {
+        expand = function(args)
+          luasnip.lsp_expand(args.body)
+        end,
+      },
       sources = {
-        { name = 'luasnip' },
         { name = 'nvim_lsp' },
+        { name = 'luasnip' },
         { name = 'path' },
         {
           name = 'buffer',
           max_item_count = 2,
         },
-        {
-          name = 'emoji'
-        }
       },
       formatting = {
         fields = { 'abbr', 'kind', 'menu' },
@@ -54,14 +54,8 @@
         ['<Tab>'] = cmp.mapping.select_next_item(),
         ['<S-Tab>'] = cmp.mapping.select_prev_item(),
         ['<CR>'] = cmp.mapping.confirm({
-          behavior = cmp.ConfirmBehavior.Replace,
           select = false,
         }),
-      },
-      snippet = {
-        expand = function(args)
-          require'luasnip'.lsp_expand(args.body)
-        end
       },
     }
   end,

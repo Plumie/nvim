@@ -1,7 +1,11 @@
 return {
   'nvim-telescope/telescope.nvim',
+  event = 'VimEnter',
+  branch = '0.1.x',
   dependencies = {
     'nvim-lua/plenary.nvim',
+    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release' },
+    { 'nvim-telescope/telescope-ui-select.nvim' },
   },
   opts = {
     defaults = {
@@ -12,6 +16,11 @@ return {
           require('telescope.previewers.utils').job_maker(cmd, bufnr, opts)
         end
       }
+    },
+    extensions = {
+      ['ui-select'] = {
+        require('telescope.themes').get_dropdown(),
+      },
     },
   },
   keys = {
@@ -25,11 +34,26 @@ return {
       '<cmd>lua require("telescope.builtin").live_grep()<cr>',
       desc = 'Find in files'
     },
+    {
+      '<leader>ed',
+      '<cmd>lua require("telescope.builtin").diagnostics()<cr>',
+      desc = 'Find in files'
+    },
+    {
+      '<leader>el',
+      '<cmd>lua require("telescope.builtin").oldfiles()<cr>',
+      desc = 'Find in files'
+    },
+    {
+      '<leader>en',
+      function ()
+        require('telescope.builtin').find_files { cwd = vim.fn.stdpath 'config' }
+      end,
+      desc = 'Find in files'
+    },
   },
-  init = function()
-    vim.cmd [[
-      hi TelescopeMatching guifg=#BA9CF3
-      hi TelescopeBorder guifg=#BA9CF3
-    ]]
-  end
+  config = function()
+    require('telescope').load_extension 'fzf'
+    require('telescope').load_extension 'ui-select'
+  end,
 }

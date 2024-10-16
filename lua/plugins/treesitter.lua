@@ -3,7 +3,6 @@ return {
   ['do'] = ':TSUpdate',
   dependencies = {
     'windwp/nvim-ts-autotag',
-    "nvim-treesitter/nvim-treesitter-textobjects",
     "RRethy/nvim-treesitter-textsubjects"
   },
   event = { "BufReadPre", "BufNewFile" },
@@ -31,24 +30,6 @@ return {
     },
     indent = {
       enable = true
-    },
-    textobjects = {
-      select = {
-        enable = true,
-        lookahead = true,
-        keymaps = {
-          ["af"] = "@function.outer",
-          ["if"] = "@function.inner",
-          ["ac"] = "@call.outer",
-          ["ic"] = "@call.inner",
-          ["ai"] = "@conditional.outer",
-          ["ii"] = "@conditional.inner",
-          ["ia"] = "@parameter.inner",
-          ["aa"] = "@parameter.outer",
-          ["al"] = "@loop.outer",
-          ["il"] = "@loop.inner",
-        },
-      },
     },
     textsubjects = {
       enable = true,

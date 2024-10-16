@@ -6,16 +6,11 @@ return {
       sidebars = "transparent",
       floats = "transparent",
     },
-  },
+ },
   init = function()
     vim.cmd [[
-      colorscheme tokyonight-storm
-			hi LineNr guibg=none guifg=#E1E3E4
-      hi cursorlinenr guibg=none guifg=#BA9CF3
-      hi cursorline guibg=#31304D
-      hi visual guifg=#000000 guibg=#E4E3E1 gui=none
-      hi statusline guibg=none
-      hi WinSeparator guifg=white
+      colorscheme tokyonight-night
+      hi LineNr guibg=none guifg=#E1E3E4
 		]]
   end
 }

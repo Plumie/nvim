@@ -1,10 +1,6 @@
 local default = { noremap = true, silent = true }
 local keymap = vim.keymap
 
--- Remap leader to space
-keymap.set("n", "<Space>", "<Nop>", default)
-vim.g.mapleader = " "
-
 -- Prevent X from yanking to clipboard
 keymap.set('n', 'x', '"_x', default)
 
@@ -12,7 +8,9 @@ keymap.set('n', 'x', '"_x', default)
 keymap.set('n', 'DD', 'ggVGd', default)
 
 -- Buffer management
-keymap.set('n', '<leader>q', ':bdelete!<CR>', default)
+-- keymap.set('n', '<leader>q', ':bdelete<CR>', default)
+keymap.set('n', '<leader>q', ':q<CR>', default)
+keymap.set('n', '<leader>Q', ':q!<CR>', default)
 keymap.set('n', '<leader>w', ':silent! w!<CR>', default)
 
 -- Window management
@@ -37,16 +35,5 @@ keymap.set("n", "-", "<C-x>", default)
 -- JK
 keymap.set('i', 'jk', '<Esc>', default)
 
--- Discipline
-keymap.set('i', '<Left>', '<Nop>', default)
-keymap.set('i', '<Right>', '<Nop>', default)
-keymap.set('i', '<Up>', '<Nop>', default)
-keymap.set('i', '<Down>', '<Nop>', default)
-keymap.set('n', '<Left>', '<Nop>', default)
-keymap.set('n', '<Right>', '<Nop>', default)
-keymap.set('n', '<Up>', '<Nop>', default)
-keymap.set('n', '<Down>', '<Nop>', default)
-keymap.set('v', '<Left>', '<Nop>', default)
-keymap.set('v', '<Up>', '<Nop>', default)
-keymap.set('v', '<Right>', '<Nop>', default)
-keymap.set('v', '<Down>', '<Nop>', default)
+-- Remove search highlight
+keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
