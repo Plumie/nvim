@@ -6,11 +6,13 @@ return {
       sidebars = "transparent",
       floats = "transparent",
     },
- },
-  init = function()
+  },
+  config = function(_, opts)
+    require('tokyonight').setup(opts)
     vim.cmd [[
       colorscheme tokyonight-night
-      hi LineNr guibg=none guifg=#E1E3E4
-		]]
+    ]]
+    vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='white' })
+    vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='white' })
   end
 }

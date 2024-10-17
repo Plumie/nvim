@@ -17,39 +17,37 @@ return {
   config = function(_, opts)
     local overseer = require('overseer')
     overseer.setup(opts)
-    -- Register a template for eslint
     overseer.register_template({
-      name = 'eslint',
+      name = "TypeScript: Compile with tsc",
       builder = function()
         return {
-          cmd = 'npm run lint',
-          name = 'eslint',
-          cwd = vim.fn.getcwd(),
+          cmd = "tsc",
+          args = { "--noEmit" },
           components = {
-            "display_duration",
-            "on_output_summarize",
-            "on_complete_notify",
-            {"on_output_parse", problem_matcher = "$eslint-stylish"},
+            "default",
+            {"on_output_parse", problem_matcher = "$tsc"},
             "on_result_diagnostics_quickfix"
-          }
+          },
         }
       end,
+      condition = {
+        callback = function()
+          return vim.fn.filereadable("tsconfig.json") == 1
+        end,
+      },
     })
-    -- Register a tempalte for tsc
+    -- same thing for eslint
     overseer.register_template({
-      name = 'tsc',
+      name = "ESLint: Lint with eslint",
       builder = function()
         return {
-          cmd = 'npm run tsc',
-          name = 'tsc',
-          cwd = vim.fn.getcwd(),
+          cmd = "eslint",
+          args = { "--fix"},
           components = {
-            "display_duration",
-            "on_output_summarize",
-            "on_complete_notify",
-            {"on_output_parse", problem_matcher = "$tsc"},
-            "on_result_diagnostics_quickfix",
-          }
+            "default",
+            {"on_output_parse", problem_matcher = "$eslint-stylish"},
+            "on_result_diagnostics_quickfix"
+          },
         }
       end,
     })

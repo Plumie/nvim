@@ -2,9 +2,12 @@ return {
   "folke/trouble.nvim",
   keys = {
     {
-      "<leader>xx",
-      "<cmd>Trouble qflist toggle<cr>",
-      desc = "Quickfix List (Trouble)",
+      "<leader>od",
+      "<cmd>Trouble diagnostics toggle<cr>",
+    },
+    {
+      "<leader>oq",
+      "<cmd>Trouble quickfix toggle<cr>",
     }
   },
   opts = {

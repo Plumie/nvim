@@ -35,8 +35,8 @@ return {
       desc = 'Find in files'
     },
     {
-      '<leader>ed',
-      '<cmd>lua require("telescope.builtin").diagnostics()<cr>',
+      '<leader>eq',
+      '<cmd>lua require("telescope.builtin").quickfix()<cr>',
       desc = 'Find in files'
     },
     {

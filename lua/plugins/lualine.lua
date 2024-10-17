@@ -22,7 +22,7 @@ return {
           path = 1,
         }
       },
-      lualine_x = {},
+      lualine_x = { "overseer" },
       lualine_y = {},
       lualine_z = {}
     }

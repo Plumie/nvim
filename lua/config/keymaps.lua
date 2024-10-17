@@ -28,10 +28,6 @@ keymap.set('v', '<S-Tab>', '<<<Esc>gv', default)
 -- Get old pasted text
 keymap.set('n', 'gp', '`[v`]', default)
 
--- Increment and decrement
-keymap.set("n", "+", "<C-a>", default)
-keymap.set("n", "-", "<C-x>", default)
-
 -- JK
 keymap.set('i', 'jk', '<Esc>', default)
 

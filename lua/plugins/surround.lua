@@ -1,4 +1,19 @@
 return {
   'kylechui/nvim-surround',
-  config = true
+  opts = {
+    surrounds = {
+      ["("] = {
+        add = function() return { { "(" }, { ")" } } end,
+      },
+      ["{"] = {
+        add = function() return { { "{" }, { "}" } } end,
+      },
+      ["["] = {
+        add = function() return { { "[" }, { "]" } } end,
+      },
+      ["<"] = {
+        add = function() return { { "<" }, { ">" } } end,
+      },
+    },
+  }
 }
