@@ -2,11 +2,11 @@ return {
   "folke/trouble.nvim",
   keys = {
     {
-      "<leader>od",
+      "<leader>ed",
       "<cmd>Trouble diagnostics toggle<cr>",
     },
     {
-      "<leader>oq",
+      "<leader>eq",
       "<cmd>Trouble quickfix toggle<cr>",
     }
   },

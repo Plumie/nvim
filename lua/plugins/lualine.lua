@@ -1,5 +1,8 @@
 return {
   'nvim-lualine/lualine.nvim',
+  dependencies = {
+    'nvim-tree/nvim-web-devicons',
+  },
   opts = {
     options = {
       theme = function()
@@ -16,15 +19,10 @@ return {
     sections = {
       lualine_a = {'mode'},
       lualine_b = {'branch', 'diff', 'diagnostics'},
-      lualine_c = {
-        {
-          'filename',
-          path = 1,
-        }
-      },
-      lualine_x = { "overseer" },
-      lualine_y = {},
-      lualine_z = {}
+      lualine_c = { { 'filename', path = 1 } },
+      lualine_x = { 'filetype' },
+      lualine_y = {'overseer'},
+      lualine_z = {'progress'},
     }
   },
 }

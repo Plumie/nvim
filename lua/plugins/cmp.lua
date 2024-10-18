@@ -14,10 +14,7 @@
       sources = {
         { name = 'nvim_lsp' },
         { name = 'path' },
-        {
-          name = 'buffer',
-          max_item_count = 2,
-        },
+        { name = 'buffer', max_item_count = 2 },
       },
       formatting = {
         fields = { 'abbr', 'kind', 'menu' },

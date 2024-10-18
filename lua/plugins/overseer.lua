@@ -2,15 +2,12 @@ return {
   'stevearc/overseer.nvim',
   opts = {
     templates = {},
-    task_list = {
-      default_detail = 3,
-      min_height = 16
-    }
+    task_list = { default_detail = 3, min_height = 16 }
   },
   keys = {
     {
       mode = 'n',
-      '<leader>or',
+      '<leader>et',
       '<cmd>OverseerRun<CR>'
     }
   },
@@ -36,7 +33,6 @@ return {
         end,
       },
     })
-    -- same thing for eslint
     overseer.register_template({
       name = "ESLint: Lint with eslint",
       builder = function()

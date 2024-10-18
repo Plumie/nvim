@@ -30,17 +30,12 @@ return {
       desc = 'Find files'
     },
     {
-      '<leader>f',
+      '<leader>ff',
       '<cmd>lua require("telescope.builtin").live_grep()<cr>',
       desc = 'Find in files'
     },
     {
-      '<leader>eq',
-      '<cmd>lua require("telescope.builtin").quickfix()<cr>',
-      desc = 'Find in files'
-    },
-    {
-      '<leader>el',
+      '<leader>fo',
       '<cmd>lua require("telescope.builtin").oldfiles()<cr>',
       desc = 'Find in files'
     },

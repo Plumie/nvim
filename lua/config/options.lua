@@ -7,12 +7,6 @@ vim.g.have_nerd_font = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 
-vim.opt.showmode = false
-
-vim.opt.autoindent = true
-vim.opt.smartindent = true
-vim.opt.breakindent = true
-
 -- Case insensitive search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -32,8 +26,8 @@ vim.opt.cmdheight = 0
 vim.opt.wrap = false
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
-vim.opt.softtabstop = 0
 vim.opt.expandtab = true
+vim.opt.autoindent = true
 
 vim.opt.pumheight = 10
 vim.opt.scrolloff = 10
@@ -48,8 +42,6 @@ vim.opt.cursorline = true
 
 vim.opt.undofile = true
 vim.opt.swapfile = false
-
-vim.opt.updatetime = 300
 
 vim.opt.mouse = ''
 
