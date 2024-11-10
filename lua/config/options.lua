@@ -29,8 +29,8 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.autoindent = true
 
-vim.opt.pumheight = 10
-vim.opt.scrolloff = 10
+vim.opt.pumheight = 2
+vim.opt.scrolloff = 5
 
 vim.schedule(function()
   vim.opt.clipboard = 'unnamedplus'

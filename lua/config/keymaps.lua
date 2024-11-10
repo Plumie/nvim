@@ -8,7 +8,6 @@ keymap.set('n', 'x', '"_x', default)
 keymap.set('n', 'DD', 'ggVGd', default)
 
 -- Buffer management
--- keymap.set('n', '<leader>q', ':bdelete<CR>', default)
 keymap.set('n', '<leader>q', ':q<CR>', default)
 keymap.set('n', '<leader>Q', ':q!<CR>', default)
 keymap.set('n', '<leader>w', ':silent! w!<CR>', default)
