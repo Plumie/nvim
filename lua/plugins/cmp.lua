@@ -1,41 +1,28 @@
   return {
-  'hrsh7th/nvim-cmp',
-  event = 'InsertEnter',
-  dependencies = {
-    'hrsh7th/cmp-nvim-lsp',
-    'hrsh7th/cmp-path',
-    'hrsh7th/cmp-buffer',
-    'onsails/lspkind-nvim',
+  'saghen/blink.cmp',
+  version = '*',
+  opts = {
+    keymap = {
+      preset = 'default',
+      ['<S-Tab>'] = { 'select_prev', 'fallback' },
+      ['<Tab>'] = { 'select_next', 'show', 'fallback' },
+      ['<CR>'] = { 'accept', 'fallback' }
+    },
+    appearance = {
+      use_nvim_cmp_as_default = true,
+      nerd_font_variant = 'mono'
+    },
+    completion = {
+      menu = {
+        auto_show = function(ctx) return ctx.mode ~= 'cmdline' end,
+        border = 'single',
+      },
+      documentation = { window = { border = 'single' } },
+    },
+    signature = { window = { border = 'single' } },
+    sources = {
+      default = { 'lsp', 'path', 'snippets', 'buffer' },
+    },
   },
-  opts = function()
-    local cmp = require('cmp')
-    local lspkind = require('lspkind')
-    return {
-      sources = {
-        { name = 'nvim_lsp' },
-        { name = 'path' },
-        { name = 'buffer', max_item_count = 2 },
-      },
-      formatting = {
-        fields = { 'abbr', 'kind', 'menu' },
-        format = lspkind.cmp_format({
-          mode = 'symbol_text',
-          maxwidth = 50,
-        })
-      },
-      completion = {
-        keyword_length = 1,
-      },
-      mapping = {
-        ['<Tab>'] = cmp.mapping.select_next_item(),
-        ['<S-Tab>'] = cmp.mapping.select_prev_item(),
-        ['<CR>'] = cmp.mapping.confirm({
-          select = false,
-        }),
-      },
-      window = {
-        documentation = cmp.config.window.bordered(),
-      }
-    }
-  end,
+  opts_extend = { "sources.default" }
 }

@@ -7,7 +7,7 @@ return {
     },
     'williamboman/mason-lspconfig.nvim',
     'WhoIsSethDaniel/mason-tool-installer.nvim',
-    'hrsh7th/cmp-nvim-lsp',
+    'saghen/blink.cmp',
   },
   config = function()
     vim.api.nvim_create_autocmd('LspAttach', {
@@ -32,9 +32,6 @@ return {
       {border = 'rounded'}
     )
 
-    local capabilities = vim.lsp.protocol.make_client_capabilities()
-    capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
-
     local servers = {
       lua_ls = {
         settings = {
@@ -55,7 +52,7 @@ return {
       handlers = {
         function(server_name)
           local server = servers[server_name] or {}
-          server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
+          server.capabilities = require('blink.cmp').get_lsp_capabilities(server.capabilities)
           require('lspconfig')[server_name].setup(server)
         end,
       },
