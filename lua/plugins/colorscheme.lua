@@ -13,5 +13,6 @@ return {
     ]]
     vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='white' })
     vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='white' })
+    vim.api.nvim_set_hl(0, 'WinSeparator', { fg='white' })
   end
 }
