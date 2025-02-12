@@ -20,10 +20,6 @@ keymap.set('n', 'vd', ':split<CR><C-w>j', default)
 keymap.set('n', '<C-d>', '<C-d>zz', default)
 keymap.set('n', '<C-u>', '<C-u>zz', default)
 
--- Indentation
-keymap.set('v', '<Tab>', '>><Esc>gv', default)
-keymap.set('v', '<S-Tab>', '<<<Esc>gv', default)
-
 -- Get old pasted text
 keymap.set('n', 'gp', '`[v`]', default)
 

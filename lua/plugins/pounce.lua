@@ -9,6 +9,7 @@ return {
       desc = 'Pounce to the match'
     }
   },
+
   init = function()
     vim.cmd [[
       hi pouncematch cterm=bold guifg=black guibg=#E1E3E4 gui=bold
