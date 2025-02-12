@@ -18,8 +18,6 @@ return {
         vim.keymap.set('n', '<leader>la', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
         vim.keymap.set('n', '<leader>lf', '<cmd>lua vim.lsp.buf.format()<CR>', opts)
         vim.keymap.set('n', 'J', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
-        vim.keymap.set('n', 'gd', function() require('telescope.builtin').lsp_definitions() end, opts)
-        vim.keymap.set('n', 'gr', function() require('telescope.builtin').lsp_references() end, opts)
       end
     })
 

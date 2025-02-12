@@ -31,14 +31,14 @@ return {
     indent = {
       enable = true
     },
-    textsubjects = {
-      enable = true,
+  },
+  config = function(_, opts)
+    require('nvim-treesitter.configs').setup(opts)
+    require('nvim-treesitter-textsubjects').configure({
       prev_selection = '<BS>',
       keymaps = {
-        ['<CR>'] = 'textsubjects-smart',
+          ['<CR>'] = 'textsubjects-smart',
       },
-    },
-  },
-  config = function(_, opts) require('nvim-treesitter.configs').setup(opts)
+    })
   end
 }
