@@ -19,7 +19,7 @@ return {
       },
       preset = {
         keys = {
-          { icon = " ", key = "s", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
+          { icon = " ", key = "s", desc = "Config", action = ":e $MYVIMRC | :cd %:p:h" },
           { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil },
           { icon = " ", key = "q", desc = "Quit", action = ":qa" },
         },
@@ -35,8 +35,6 @@ return {
     picker = { enabled = true },
     notifier = { enabled = true },
     quickfile = { enabled = true },
-    statuscolumn = { enabled = true },
-    words = { enabled = true },
   },
   keys = {
     { "<leader>p", function() Snacks.picker.smart() end, desc = "Smart search" },
