@@ -37,8 +37,8 @@ return {
       win = {
         input = {
           keys = {
-            ['<Tab>'] = { 'list_down', mode = {'i', 'n'} },
-            ['<S-Tab>'] = { 'list_up', mode = {'i', 'n'} },
+            ["<Tab>"] = { "list_down", mode = {"i", "n"} },
+            ["<S-Tab>"] = { "list_up", mode = {"i", "n"} },
 
           }
         }
@@ -55,7 +55,5 @@ return {
     { "gr", function() Snacks.picker.lsp_references() end, nowait = true, desc = "References" },
     { "gI", function() Snacks.picker.lsp_implementations() end, desc = "Goto Implementation" },
     { "gy", function() Snacks.picker.lsp_type_definitions() end, desc = "Goto T[y]pe Definition" },
-    { "<Tab>", function() Snacks.picker.next() end, desc = "Next" },
-    { "<S-Tab>", function() Snacks.picker.prev() end, desc = "Prev" },
   }
 }
