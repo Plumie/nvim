@@ -32,18 +32,30 @@ return {
       },
     },
     input = { enabled = true },
-    picker = { enabled = true },
+    picker = {
+      enabled = true,
+      win = {
+        input = {
+          keys = {
+            ['<Tab>'] = { 'list_down', mode = {'i', 'n'} },
+            ['<S-Tab>'] = { 'list_up', mode = {'i', 'n'} },
+
+          }
+        }
+      }
+    },
     notifier = { enabled = true },
     quickfile = { enabled = true },
   },
   keys = {
-    { "<leader>p", function() Snacks.picker.smart() end, desc = "Smart search" },
+    { "<leader>p", function() Snacks.picker.files() end, desc = "Smart search" },
     { "<leader>f", function() Snacks.picker.grep() end, desc = "Grep"},
     { "gd", function() Snacks.picker.lsp_definitions() end, desc = "Goto Definition" },
     { "gD", function() Snacks.picker.lsp_declarations() end, desc = "Goto Declaration" },
     { "gr", function() Snacks.picker.lsp_references() end, nowait = true, desc = "References" },
     { "gI", function() Snacks.picker.lsp_implementations() end, desc = "Goto Implementation" },
     { "gy", function() Snacks.picker.lsp_type_definitions() end, desc = "Goto T[y]pe Definition" },
-
+    { "<Tab>", function() Snacks.picker.next() end, desc = "Next" },
+    { "<S-Tab>", function() Snacks.picker.prev() end, desc = "Prev" },
   }
 }
