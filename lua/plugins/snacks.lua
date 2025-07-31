@@ -44,7 +44,6 @@ return {
         }
       }
     },
-    notifier = { enabled = true },
     quickfile = { enabled = true },
   },
   keys = {
